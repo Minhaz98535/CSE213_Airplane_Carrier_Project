@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.airplane_carrier_project_cse213.LoginViewController">
+    <children>
+        <TextField fx:id="userIdTF" layoutX="513.0" layoutY="272.0" prefHeight="25.0" prefWidth="180.0" />
+        <Text layoutX="513.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User ID" />
+        <Text layoutX="513.0" layoutY="319.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
+        <Text layoutX="513.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Role" />
+        <ComboBox fx:id="userRoleCB" layoutX="513.0" layoutY="214.0" prefHeight="25.0" prefWidth="180.0" />
+        <Button layoutX="580.0" layoutY="374.0" mnemonicParsing="false" onAction="#userLoginBTN" text="Login" />
+        <PasswordField fx:id="userPasswordPF" layoutX="513.0" layoutY="328.0" prefHeight="25.0" prefWidth="180.0" />
+    </children>
+
+</AnchorPane>
