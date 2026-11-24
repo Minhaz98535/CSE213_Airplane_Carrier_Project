@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="swapnil.MissionManagementControllerView">
+   <children>
+      <Line endX="906.7269287109375" endY="-7.62939453125E-6" layoutX="124.0" layoutY="73.0" startX="-126.75154876708984" startY="-7.62939453125E-6" />
+      <Text layoutX="18.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aircraft Carrier Portal" wrappingWidth="407.9324188232422">
+         <font>
+            <Font name="Arial Black" size="31.0" />
+         </font>
+      </Text>
+      <Label alignment="CENTER" layoutX="814.0" layoutY="18.0" prefHeight="44.0" prefWidth="198.0" style="-fx-background-color: lightgreen;" text="Captain Panel">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Text layoutX="388.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-style: red\;" text="Mission Management" wrappingWidth="237.18553161621094">
+         <font>
+            <Font name="Times New Roman Bold" size="25.0" />
+         </font>
+      </Text>
+      <Button layoutX="17.0" layoutY="534.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="103.0" style="-fx-background-color: pink;" text="Back">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Button>
+      <Text layoutX="17.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assign New Mission" wrappingWidth="194.60626220703125">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Text>
+      <Text layoutX="45.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mission Name : ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <TextField layoutX="155.0" layoutY="140.0" prefHeight="34.0" prefWidth="192.0" />
+      <Text layoutX="45.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Planned Date :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <DatePicker layoutX="157.0" layoutY="195.0" />
+      <Text layoutX="44.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mission Type : ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <ComboBox layoutX="159.0" layoutY="241.0" prefHeight="26.0" prefWidth="182.0" />
+      <Text layoutX="411.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Target :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <TextField layoutX="489.0" layoutY="140.0" prefHeight="34.0" prefWidth="192.0" />
+      <Text layoutX="405.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <TextArea layoutX="489.0" layoutY="187.0" prefHeight="82.0" prefWidth="214.0" />
+      <Button layoutX="769.0" layoutY="172.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="201.0" text="Assign Mission">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Text layoutX="19.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assigned Missions" wrappingWidth="194.60626220703125">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Text>
+      <TableView layoutX="17.0" layoutY="322.0" prefHeight="189.0" prefWidth="631.0">
+        <columns>
+          <TableColumn prefWidth="82.72420692443848" text="Mission ID" />
+          <TableColumn prefWidth="119.27577209472656" text="Mission Name" />
+            <TableColumn prefWidth="99.76185607910156" text="Mission Type" />
+            <TableColumn prefWidth="109.03759765625" text="MIssion Target" />
+            <TableColumn prefWidth="119.16854858398438" text="Planned Date" />
+            <TableColumn prefWidth="99.15460205078125" text="Status" />
+        </columns>
+      </TableView>
+      <Text layoutX="683.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mission Type : ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="683.0" layoutY="421.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mission Before :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <DatePicker layoutX="795.0" layoutY="403.0" />
+      <Text layoutX="683.0" layoutY="467.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mission Status: ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <ComboBox layoutX="797.0" layoutY="449.0" prefHeight="26.0" prefWidth="182.0" />
+      <ComboBox layoutX="797.0" layoutY="354.0" prefHeight="26.0" prefWidth="182.0" />
+      <Button layoutX="775.0" layoutY="504.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="176.0" text="Filter Mission Table">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Text layoutX="768.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-style: red\;" text="Filtering Missions" wrappingWidth="144.61380640360073">
+         <font>
+            <Font name="Times New Roman" size="17.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
