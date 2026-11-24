@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="swapnil.SetMissionPriorityViewController">
+   <children>
+      <Line endX="906.7269287109375" endY="-7.62939453125E-6" layoutX="123.0" layoutY="73.0" startX="-126.75154876708984" startY="-7.62939453125E-6" />
+      <Text layoutX="17.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aircraft Carrier Portal" wrappingWidth="407.9324188232422">
+         <font>
+            <Font name="Arial Black" size="31.0" />
+         </font>
+      </Text>
+      <Label alignment="CENTER" layoutX="813.0" layoutY="18.0" prefHeight="44.0" prefWidth="198.0" style="-fx-background-color: lightgreen;" text="Captain Panel">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Text layoutX="387.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-style: red\;" text="Mission Priority" textAlignment="CENTER" wrappingWidth="237.18553161621094">
+         <font>
+            <Font name="Times New Roman Bold" size="25.0" />
+         </font>
+      </Text>
+      <Button layoutX="22.0" layoutY="527.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="103.0" style="-fx-background-color: pink;" text="Back">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Button>
+      <Text layoutX="25.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assigned Missions" wrappingWidth="194.60626220703125">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Text>
+      <TableView layoutX="63.0" layoutY="147.0" prefHeight="197.0" prefWidth="894.0">
+         <columns>
+            <TableColumn prefWidth="116.38148498535156" text="Mission ID" />
+            <TableColumn prefWidth="198.97686767578125" text="Mission Name" />
+            <TableColumn prefWidth="182.52313232421875" text="Mission Type" />
+            <TableColumn prefWidth="205.88723754882812" text="Planned Date" />
+            <TableColumn prefWidth="191.35821533203125" text="Priority" />
+         </columns>
+      </TableView>
+      <Text layoutX="27.0" layoutY="440.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Mission ID">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <ComboBox layoutX="147.0" layoutY="418.0" prefHeight="36.0" prefWidth="185.0" />
+      <Button layoutX="736.0" layoutY="410.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="176.0" text="Update Priority">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Text layoutX="437.0" layoutY="383.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-style: red\;" text="Update Mission Priorty" wrappingWidth="207.00812955080266">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="19.0" />
+         </font>
+      </Text>
+      <Text layoutX="371.0" layoutY="440.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select priority">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <ComboBox layoutX="477.0" layoutY="416.0" prefHeight="36.0" prefWidth="185.0" />
+   </children>
+</AnchorPane>
