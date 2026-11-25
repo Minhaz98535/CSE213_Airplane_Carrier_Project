@@ -7,7 +7,6 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
    <children>
       <DatePicker fx:id="flightscheduledate" layoutX="7.0" layoutY="73.0" prefHeight="25.0" prefWidth="359.0" />
@@ -21,7 +20,7 @@
             <TableColumn fx:id="status" prefWidth="135.0" text="status" />
         </columns>
       </TableView>
-      <Label fx:id="noflightmassage" layoutX="99.0" layoutY="300.0" prefHeight="17.0" prefWidth="494.0" text="no flight scheduled for the selected date" />
+      <Label fx:id="noflightmassage" layoutX="99.0" layoutY="300.0" prefHeight="17.0" prefWidth="494.0" text="massage" />
       <Label fx:id="flightschedule" layoutX="14.0" layoutY="14.0" text="FlighSchedule" />
    </children>
 </AnchorPane>
