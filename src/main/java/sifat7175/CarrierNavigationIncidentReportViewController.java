@@ -1,4 +1,4 @@
-package com.example.airplane_carrier_project_cse213.sifat7175;
+package sifat7175;
 
 public class CarrierNavigationIncidentReportViewController
 {
