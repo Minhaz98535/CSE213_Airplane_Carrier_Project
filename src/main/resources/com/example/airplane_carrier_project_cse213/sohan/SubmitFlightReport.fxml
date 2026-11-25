@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/27.0.1.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+   <children>
+      <ComboBox fx:id="completedflightComboBox" layoutX="14.0" layoutY="45.0" prefHeight="26.0" prefWidth="285.0" promptText="Completed flight" />
+      <Label fx:id="flightidmassage" layoutX="37.0" layoutY="77.0" text="Label" />
+      <Label fx:id="aircraftidmassage" layoutX="101.0" layoutY="77.0" text="Label" />
+      <Label layoutX="255.0" layoutY="125.0" text="Arrivel" />
+      <Label fx:id="destinationmassage" layoutX="261.0" layoutY="77.0" text="Label" />
+      <TextField fx:id="deparaturetextfield" layoutX="85.0" layoutY="120.0" />
+      <TextField fx:id="arriveltextfield" layoutX="318.0" layoutY="120.0" />
+      <Label layoutX="24.0" layoutY="125.0" text="Departure" />
+      <TextArea fx:id="flightObservstionstextArea" layoutX="14.0" layoutY="154.0" prefHeight="61.0" prefWidth="581.0" promptText="flight Observations" />
+      <TextArea fx:id="addtionalRemarkstextarea" layoutX="14.0" layoutY="228.0" prefHeight="61.0" prefWidth="581.0" promptText="Additional remarks" />
+      <Button layoutX="24.0" layoutY="296.0" mnemonicParsing="false" onAction="#submitreportButton" text="submit report" />
+      <Label fx:id="pleasecompleteallinfomassage" layoutX="515.0" layoutY="301.0" text="massage" />
+      <Label fx:id="submitflightreportfxid" layoutX="22.0" layoutY="14.0" text="submitFlight Report" />
+   </children>
+</AnchorPane>
