@@ -1,14 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="CONTROLLER_NAME"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/27.0.1.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+   <children>
+      <Label fx:id="pilotdeshboardlebel" layoutX="24.0" layoutY="6.0" text="Pilot Deshboard" />
+      <Label fx:id="pilotnamefxid" layoutX="432.0" layoutY="15.0" prefHeight="17.0" prefWidth="90.0" text="Label" />
+      <Button layoutX="534.0" layoutY="10.0" mnemonicParsing="false" onAction="#logoutButton" text="logout" />
+      <VBox layoutX="12.0" layoutY="47.0" prefHeight="354.0" prefWidth="166.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#flightScheduleButton" prefHeight="54.0" prefWidth="173.0" text="Flight Schedule" />
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#myaircraftbutton" prefHeight="54.0" prefWidth="173.0" text="My AIrcraft" />
+            <Button layoutX="10.0" layoutY="64.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="173.0" text="Pre- Flight Cheaklist" />
+            <Button layoutX="10.0" layoutY="118.0" mnemonicParsing="false" onAction="#weatherinfobutton" prefHeight="54.0" prefWidth="173.0" text="Weather Info" />
+            <Button layoutX="10.0" layoutY="172.0" mnemonicParsing="false" onAction="#submitreportbutton" prefHeight="54.0" prefWidth="173.0" text="Submit Report" />
+            <Button layoutX="10.0" layoutY="226.0" mnemonicParsing="false" onAction="#reportissuebutton" prefHeight="54.0" prefWidth="173.0" text="Report Issue" />
+         </children>
+      </VBox>
+      <StackPane fx:id="Fxmlgoalload" layoutX="189.0" layoutY="43.0" prefHeight="350.0" prefWidth="410.0" />
+      <BorderPane fx:id="pilotdeshboardborder" layoutX="3.0" layoutY="8.0" prefHeight="392.0" prefWidth="594.0" />
+   </children>
 </AnchorPane>
