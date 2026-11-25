@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="653.0" prefWidth="1329.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="swapnil.accidentReportsViewController">
+    <children>
+        <Line endX="1195.0" layoutX="121.0" layoutY="71.0" startX="-126.75154876708984" startY="-7.62939453125E-6" />
+        <Text layoutX="22.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Carrier Navigation Portal" wrappingWidth="523.9323883056641">
+            <font>
+                <Font name="Arial Black" size="31.0" />
+            </font>
+        </Text>
+        <Label alignment="CENTER" layoutX="1096.0" layoutY="16.0" prefHeight="44.0" prefWidth="198.0" style="-fx-background-color: lightgreen;" text="Navigation Panel">
+            <font>
+                <Font name="System Bold" size="21.0" />
+            </font>
+        </Label>
+        <Text layoutX="387.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-style: red\;" text="Incident Reports" textAlignment="CENTER" wrappingWidth="237.18553161621094">
+            <font>
+                <Font name="Times New Roman Bold" size="25.0" />
+            </font>
+        </Text>
+        <Button layoutX="22.0" layoutY="553.0" mnemonicParsing="false" onAction="#backOnActionButton" prefHeight="38.0" prefWidth="103.0" style="-fx-background-color: pink;" text="Back">
+            <font>
+                <Font name="System Bold" size="26.0" />
+            </font>
+        </Button>
+        <TableView fx:id="incidentreportTableView" layoutX="14.0" layoutY="155.0" prefHeight="191.0" prefWidth="1294.0">
+            <columns>
+                <TableColumn fx:id="incidentidTC" prefWidth="115.9999771118164" text="Incident ID" />
+                <TableColumn fx:id="dateTC" prefWidth="125.59996032714844" text="Date" />
+                <TableColumn prefWidth="119.20001220703125" text="Position" />
+                <TableColumn prefWidth="204.79998779296875" text="Accident Location" />
+                <TableColumn prefWidth="167.2000732421875" text="Reason" />
+            <TableColumn prefWidth="259.199951171875" text="Status" />
+            <TableColumn prefWidth="349.60003662109375" text="Severity" />
+            </columns>
+        </TableView>
+        <ComboBox fx:id="statusCMB" layoutX="671.0" layoutY="399.0" prefHeight="36.0" prefWidth="185.0" promptText="Status" />
+        <Button layoutX="876.0" layoutY="401.0" mnemonicParsing="false" onAction="#getdescriptionOnAction" prefHeight="31.0" prefWidth="133.0" text="Get Description">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Button>
+        <Text layoutX="703.0" layoutY="379.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-style: red\;" text="Details Report" textAlignment="CENTER" wrappingWidth="207.00812955080266">
+            <font>
+                <Font name="Times New Roman Bold Italic" size="21.0" />
+            </font>
+        </Text>
+        <Text layoutX="199.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-style: red\;" text="Filter Report" textAlignment="CENTER" wrappingWidth="207.00812955080266">
+            <font>
+                <Font name="Times New Roman Bold Italic" size="21.0" />
+            </font>
+        </Text>
+        <TextArea layoutX="591.0" layoutY="469.0" prefHeight="167.0" prefWidth="638.0" promptText="Report details will appear here">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font></TextArea>
+        <Text layoutX="69.0" layoutY="436.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filter by Damage">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Text>
+        <ComboBox fx:id="filterbydamageCMB" layoutX="213.0" layoutY="412.0" prefHeight="36.0" prefWidth="185.0" />
+        <Button layoutX="232.0" layoutY="472.0" mnemonicParsing="false" onAction="#filterreportOnAction" prefHeight="43.0" prefWidth="137.0" text="Filter Report">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Button>
+      <DatePicker fx:id="filterincidentdateDatepicker" layoutX="1060.0" layoutY="364.0" promptText="Filter Incident Date " />
+      <ComboBox fx:id="severityCMB" layoutX="1055.0" layoutY="408.0" prefHeight="36.0" prefWidth="185.0" promptText="Severity" />
+    </children>
+</AnchorPane>

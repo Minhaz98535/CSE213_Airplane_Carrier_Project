@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.airplane_carrier_project_cse213.sifat7175.CarrierNavigationViewController">    <children>
+        <Line endX="906.7269287109375" endY="-7.62939453125E-6" layoutX="125.0" layoutY="63.0" startX="-126.75154876708984" startY="-7.62939453125E-6" />
+        <Text layoutX="28.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Carrier Navigation Portal" wrappingWidth="487.9324188232422">
+            <font>
+                <Font name="Arial Black" size="31.0" />
+            </font>
+        </Text>
+        <Label alignment="CENTER" layoutX="698.0" layoutY="9.0" prefHeight="44.0" prefWidth="310.0" style="-fx-background-color: lightgreen;" text="Carrier Navigation Officer">
+            <font>
+                <Font name="System Bold" size="21.0" />
+            </font>
+        </Label>
+        <Line endX="148.957763671875" endY="353.0" layoutX="111.0" layoutY="247.0" startX="148.95779418945312" startY="-183.50001525878906" />
+        <VBox layoutX="-1.0" layoutY="63.0" prefHeight="538.0" prefWidth="261.0" style="-fx-background-color: #1E293B;" />
+        <Text layoutX="272.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DASHBOARD" wrappingWidth="173.9324188232422">
+            <font>
+                <Font name="Times New Roman Bold" size="25.0" />
+            </font>
+        </Text>
+        <Button alignment="CENTER" layoutX="7.0" layoutY="78.0" mnemonicParsing="false" onAction="#dashboardOnAction" prefHeight="37.0" prefWidth="242.0" text="Dashboard">
+            <font>
+                <Font name="Arial" size="19.0" />
+            </font>
+        </Button>
+        <Button alignment="CENTER" layoutX="6.0" layoutY="129.0" mnemonicParsing="false" onAction="#trackingnearbyvesselsOnAction" prefHeight="37.0" prefWidth="242.0" text="Tracking Nearby Vessels">
+            <font>
+                <Font name="Arial" size="19.0" />
+            </font>
+        </Button>
+        <Button alignment="CENTER" layoutX="7.0" layoutY="228.0" mnemonicParsing="false" onAction="#createrouteOnAction" prefHeight="37.0" prefWidth="242.0" text="Create Route">
+            <font>
+                <Font name="Arial" size="19.0" />
+            </font>
+        </Button>
+        <Button alignment="CENTER" layoutX="7.0" layoutY="178.0" mnemonicParsing="false" onAction="#voyagestatusOnAction" prefHeight="37.0" prefWidth="242.0" text="Voyage Status Overview">
+            <font>
+                <Font name="Arial" size="19.0" />
+            </font>
+        </Button>
+        <Button alignment="CENTER" layoutX="7.0" layoutY="278.0" mnemonicParsing="false" onAction="#chartoverlaysOnAction" prefHeight="37.0" prefWidth="242.0" text="Chart Overlays">
+            <font>
+                <Font name="Arial" size="19.0" />
+            </font>
+        </Button>
+        <Button alignment="CENTER" layoutX="7.0" layoutY="327.0" mnemonicParsing="false" onAction="#windOnAction" prefHeight="37.0" prefWidth="242.0" text="Wind">
+            <font>
+                <Font name="Arial" size="19.0" />
+            </font>
+        </Button>
+        <Button alignment="CENTER" layoutX="83.0" layoutY="541.0" mnemonicParsing="false" onAction="#logoutOnAction" prefHeight="37.0" prefWidth="76.0" style="-fx-background-color: red;" text="Log Out" textFill="WHITE">
+            <font>
+                <Font name="Arial Bold Italic" size="14.0" />
+            </font>
+        </Button>
+        <Button alignment="CENTER" layoutX="8.0" layoutY="376.0" mnemonicParsing="false" onAction="#positionhistorylogOnAction" prefHeight="37.0" prefWidth="242.0" text="Position History log">
+            <font>
+                <Font name="Arial" size="19.0" />
+            </font>
+        </Button>
+        <VBox layoutX="674.0" layoutY="119.0" prefHeight="109.0" prefWidth="310.0" style="-fx-background-color: lightblue;">
+            <children>
+                <Label alignment="CENTER" prefHeight="50.0" prefWidth="310.0" text="Current Speed">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER" prefHeight="77.0" prefWidth="310.0" text="22 Knots">
+                    <font>
+                        <Font size="45.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+        <Label layoutX="273.0" layoutY="240.0" prefHeight="38.0" prefWidth="232.0" text="Nearby Vessels Traffic">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label layoutX="277.0" layoutY="440.0" prefHeight="38.0" prefWidth="232.0" text="Emergency Notifications">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Button alignment="CENTER" layoutX="9.0" layoutY="427.0" mnemonicParsing="false" onAction="#contactcaptainOnAction" prefHeight="37.0" prefWidth="242.0" text="Contact Captain">
+            <font>
+                <Font name="Arial" size="19.0" />
+            </font>
+        </Button>
+        <Button alignment="CENTER" layoutX="9.0" layoutY="477.0" mnemonicParsing="false" onAction="#incidentreportOnAction" prefHeight="37.0" prefWidth="242.0" text="Incident Report">
+            <font>
+                <Font name="Arial" size="19.0" />
+            </font>
+        </Button>
+        <TableView fx:id="nearbyvesseltraficTableView" layoutX="276.0" layoutY="277.0" prefHeight="147.0" prefWidth="708.0">
+            <columns>
+                <TableColumn fx:id="vesselidTableCollumn" prefWidth="170.2760009765625" text="Vessel ID" />
+                <TableColumn fx:id="distanceTableCollumn" prefWidth="292.47821044921875" text="Distance" />
+                <TableColumn fx:id="riskstatusTableCollumn" prefWidth="245.02178955078125" text="Risk Status" />
+            </columns>
+        </TableView>
+      <Label fx:id="vesselLable" alignment="CENTER" layoutX="324.0" layoutY="123.0" prefHeight="69.0" prefWidth="174.0" style="-fx-background-color: lightblue;" text="Vessels " textAlignment="CENTER">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Button layoutX="322.0" layoutY="215.0" mnemonicParsing="false" onAction="#loadnearbyvesselOnActionButton" prefHeight="26.0" prefWidth="192.0" style="-fx-background-color: lightgray;" text="Load Nearby Vessels">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>
