@@ -1,14 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="CONTROLLER_NAME"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/27.0.1.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+   <children>
+      <Label layoutX="33.0" layoutY="22.0" text="Request flight Clearance" />
+      <ComboBox fx:id="flightComboBox" layoutX="76.0" layoutY="54.0" prefHeight="26.0" prefWidth="223.0" promptText="flight" />
+      <TableView fx:id="flightdetailsTabileview" layoutY="93.0" prefHeight="85.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="flightidCol" prefWidth="116.0" text="flight id" />
+          <TableColumn fx:id="aircraftidCol" prefWidth="105.0" text="aircraft id" />
+            <TableColumn fx:id="missonCol" prefWidth="112.0" text="misson" />
+            <TableColumn fx:id="timeCol" prefWidth="130.0" text="time" />
+            <TableColumn fx:id="statusCol" prefWidth="130.0" text="status" />
+        </columns>
+      </TableView>
+      <Label fx:id="aircraftreadinessmassage" layoutX="361.0" layoutY="192.0" text="aircraft readiness" />
+      <Label fx:id="cheaklistmassage" layoutX="76.0" layoutY="192.0" text="cheaklist" />
+      <Button layoutX="409.0" layoutY="225.0" mnemonicParsing="false" onAction="#requestclearanceButton" prefHeight="26.0" prefWidth="186.0" text="request Clearance" />
+      <Label fx:id="showaicraftnotreadymassage" layoutX="11.0" layoutY="286.0" prefHeight="17.0" prefWidth="586.0" text="Label" />
+   </children>
 </AnchorPane>

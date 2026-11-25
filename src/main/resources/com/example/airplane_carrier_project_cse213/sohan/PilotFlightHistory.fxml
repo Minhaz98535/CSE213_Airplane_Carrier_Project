@@ -1,14 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="gi"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/27.0.1.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gi">
+   <children>
+      <Text layoutX="33.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pilot Flight History" />
+      <DatePicker fx:id="fromdatepicker" layoutX="64.0" layoutY="45.0" />
+      <DatePicker fx:id="todatepicker" layoutX="313.0" layoutY="46.0" />
+      <Button layoutX="518.0" layoutY="46.0" mnemonicParsing="false" onAction="#applyfilterButton" text="apply filter" />
+      <Label layoutX="18.0" layoutY="50.0" text="from" />
+      <Label layoutX="270.0" layoutY="51.0" text="to" />
+      <TableView fx:id="pilotflighthistorytabileview" layoutX="7.0" layoutY="86.0" prefHeight="200.0" prefWidth="589.0">
+        <columns>
+          <TableColumn fx:id="flightidCol" prefWidth="75.0" text="flight id" />
+          <TableColumn fx:id="aircraftIdCol" prefWidth="92.0" text="aircraft ID" />
+            <TableColumn fx:id="destinationCol" prefWidth="89.0" text="destination" />
+            <TableColumn fx:id="departureCol" prefWidth="89.0" text="departure" />
+            <TableColumn fx:id="arrivalCol" prefWidth="96.0" text="arrival" />
+            <TableColumn fx:id="statusCol" prefWidth="147.0" text="status" />
+        </columns>
+      </TableView>
+      <Label fx:id="noflighthistorymassage" layoutX="441.0" layoutY="286.0" text="massage" />
+   </children>
 </AnchorPane>
