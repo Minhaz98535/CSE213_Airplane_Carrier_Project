@@ -8,25 +8,25 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.airplane_carrier_project_cse213.LoginViewController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.airplane_carrier_project_cse213.LoginViewController">
     <children>
-        <TextField fx:id="userIdTF" layoutX="310.0" layoutY="278.0" prefHeight="25.0" prefWidth="180.0" />
-        <Text layoutX="310.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User ID" />
-        <Text layoutX="310.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
-        <Text layoutX="310.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Role" />
-        <ComboBox fx:id="userRoleCB" layoutX="310.0" layoutY="220.0" prefHeight="25.0" prefWidth="180.0" />
-        <Button layoutX="365.0" layoutY="379.0" mnemonicParsing="false" onAction="#userLoginBTN" prefHeight="27.0" prefWidth="78.0" style="-fx-background-color: cyan;" text="Login">
+        <TextField fx:id="userIdTF" layoutX="433.0" layoutY="286.0" prefHeight="25.0" prefWidth="180.0" />
+        <Text layoutX="433.0" layoutY="277.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User ID" />
+        <Text layoutX="433.0" layoutY="333.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
+        <Text layoutX="433.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Role" />
+        <ComboBox fx:id="userRoleCB" layoutX="433.0" layoutY="228.0" prefHeight="25.0" prefWidth="180.0" />
+        <Button layoutX="488.0" layoutY="387.0" mnemonicParsing="false" onAction="#userLoginBTN" prefHeight="27.0" prefWidth="78.0" style="-fx-background-color: cyan;" text="Login">
          <font>
             <Font name="System Bold Italic" size="16.0" />
          </font></Button>
-        <PasswordField fx:id="userPasswordPF" layoutX="310.0" layoutY="334.0" prefHeight="25.0" prefWidth="180.0" />
-      <Button layoutX="366.0" layoutY="444.0" mnemonicParsing="false" onAction="#userLoginBTN" prefHeight="31.0" prefWidth="78.0" style="-fx-background-color: lime;" text="Register">
+        <PasswordField fx:id="userPasswordPF" layoutX="433.0" layoutY="342.0" prefHeight="25.0" prefWidth="180.0" />
+      <Button layoutX="489.0" layoutY="452.0" mnemonicParsing="false" onAction="#userRegisterBTN" prefHeight="31.0" prefWidth="78.0" style="-fx-background-color: lime;" text="Register">
          <font>
             <Font name="System Bold Italic" size="14.0" />
          </font>
       </Button>
-      <Text layoutX="396.0" layoutY="433.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OR" />
-      <Text layoutX="136.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aircraft Carrier Portal" wrappingWidth="527.48974609375">
+      <Text layoutX="519.0" layoutY="441.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OR" />
+      <Text layoutX="259.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aircraft Carrier Portal" wrappingWidth="527.48974609375">
          <font>
             <Font size="59.0" />
          </font>
