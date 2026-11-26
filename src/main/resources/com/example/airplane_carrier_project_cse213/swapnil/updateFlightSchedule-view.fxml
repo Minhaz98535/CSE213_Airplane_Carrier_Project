@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="swapnil.UpdateFlightScheduleViewController">
+   <children>
+      <Line endX="906.7269287109375" endY="-7.62939453125E-6" layoutX="119.0" layoutY="74.0" startX="-126.75154876708984" startY="-7.62939453125E-6" />
+      <Text layoutX="17.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aircraft Carrier Portal" wrappingWidth="407.9324188232422">
+         <font>
+            <Font name="Arial Black" size="31.0" />
+         </font>
+      </Text>
+      <Label alignment="CENTER" layoutX="813.0" layoutY="19.0" prefHeight="44.0" prefWidth="198.0" style="-fx-background-color: lightgreen;" text="Air Operation Officer">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Text layoutX="361.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-style: red\;" text="Update Flight Schedule" textAlignment="CENTER" wrappingWidth="336.9729461669922">
+         <font>
+            <Font name="Times New Roman Bold" size="25.0" />
+         </font>
+      </Text>
+      <Button layoutX="16.0" layoutY="535.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="103.0" style="-fx-background-color: pink;" text="Back">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Button>
+      <Text layoutX="30.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Flight Data" wrappingWidth="194.60626220703125">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Text>
+      <TableView layoutX="171.0" layoutY="165.0" prefHeight="186.0" prefWidth="691.0">
+         <columns>
+            <TableColumn prefWidth="119.86815643310547" text="Flight ID" />
+            <TableColumn prefWidth="140.28884887695312" text="Assign mission" />
+            <TableColumn prefWidth="120.21005249023438" text="Date" />
+            <TableColumn prefWidth="126.4468994140625" text="Time" />
+            <TableColumn prefWidth="184.55316162109375" text="Aircraft ID" />
+         </columns>
+      </TableView>
+      <Text layoutX="35.0" layoutY="407.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select current Flight :" />
+      <ComboBox layoutX="161.0" layoutY="386.0" prefHeight="35.0" prefWidth="164.0" />
+      <Button layoutX="797.0" layoutY="422.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="176.0" text="Update Schedule">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Text layoutX="50.0" layoutY="472.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Flight Date :" />
+      <DatePicker layoutX="159.0" layoutY="451.0" prefHeight="35.0" prefWidth="165.0" />
+      <Text layoutX="457.0" layoutY="409.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Time :" />
+      <Text layoutX="391.0" layoutY="472.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reason for resechedule :" />
+      <TextField layoutX="536.0" layoutY="388.0" prefHeight="35.0" prefWidth="170.0" promptText="02:30" />
+      <TextArea layoutX="533.0" layoutY="454.0" prefHeight="105.0" prefWidth="205.0" />
+   </children>
+</AnchorPane>

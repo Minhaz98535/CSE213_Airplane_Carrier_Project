@@ -1,6 +1,7 @@
 module com.example.cse213_airplane_carrier_project {
     requires javafx.controls;
     requires javafx.fxml;
+    requires javafx.graphics;
 
 
     opens com.example.airplane_carrier_project_cse213 to javafx.fxml;

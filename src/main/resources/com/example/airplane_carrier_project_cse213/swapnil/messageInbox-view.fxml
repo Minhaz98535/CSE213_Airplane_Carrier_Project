@@ -1,8 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="swapnil.messageInboxViewController">
-
+   <children>
+      <Line endX="906.7269287109375" endY="-7.62939453125E-6" layoutX="120.0" layoutY="71.0" startX="-126.75154876708984" startY="-7.62939453125E-6" />
+      <Text layoutX="16.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aircraft Carrier Portal" wrappingWidth="407.9324188232422">
+         <font>
+            <Font name="Arial Black" size="31.0" />
+         </font>
+      </Text>
+      <Label alignment="CENTER" layoutX="812.0" layoutY="16.0" prefHeight="44.0" prefWidth="198.0" style="-fx-background-color: lightgreen;" text="Captain Panel">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Text layoutX="386.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-style: red\;" text="Accident Reports" textAlignment="CENTER" wrappingWidth="237.18553161621094">
+         <font>
+            <Font name="Times New Roman Bold" size="25.0" />
+         </font>
+      </Text>
+      <Button layoutX="21.0" layoutY="525.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="103.0" style="-fx-background-color: pink;" text="Back">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Button>
+      <TableView layoutX="56.0" layoutY="156.0" prefHeight="191.0" prefWidth="897.0">
+         <columns>
+            <TableColumn prefWidth="152.96866607666016" text="Report ID" />
+            <TableColumn prefWidth="147.03134155273438" text="Date" />
+            <TableColumn prefWidth="172.2298583984375" text="Aircraft ID" />
+            <TableColumn prefWidth="211.01907348632812" text="Accident Location" />
+            <TableColumn prefWidth="213.44403076171875" text="Dmage Severity" />
+         </columns>
+      </TableView>
+      <Text layoutX="552.0" layoutY="422.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Report ID">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <ComboBox layoutX="670.0" layoutY="399.0" prefHeight="36.0" prefWidth="185.0" />
+      <Button layoutX="875.0" layoutY="401.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="133.0" text="Get Description">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Text layoutX="702.0" layoutY="379.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-style: red\;" text="Details Report" textAlignment="CENTER" wrappingWidth="207.00812955080266">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="21.0" />
+         </font>
+      </Text>
+      <Text layoutX="198.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-style: red\;" text="Filter Report" textAlignment="CENTER" wrappingWidth="207.00812955080266">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="21.0" />
+         </font>
+      </Text>
+      <TextArea layoutX="556.0" layoutY="449.0" prefHeight="138.0" prefWidth="453.0" />
+      <Text layoutX="98.0" layoutY="435.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filter by Damage">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <ComboBox layoutX="212.0" layoutY="412.0" prefHeight="36.0" prefWidth="185.0" />
+      <Button layoutX="231.0" layoutY="472.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="137.0" text="Filter Report">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+   </children>
 </AnchorPane>
