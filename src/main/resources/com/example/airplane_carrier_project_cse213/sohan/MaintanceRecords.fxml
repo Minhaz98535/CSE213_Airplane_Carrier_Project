@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/27.0.1.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sohan.MaintanceRecordController">
+
+    <VBox prefHeight="450" prefWidth="600" spacing="10" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+
+        <Label text="Maintenance Records" />
+
+        <TextField fx:id="searchField" promptText="Search Aircraft ID" />
+
+        <Button onAction="#searchButton" text="Search" />
+
+        <TableView fx:id="maintenanceTable" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="recordIdColumn" text="Record ID" />
+                <TableColumn fx:id="aircraftIdColumn" text="Aircraft ID" />
+                <TableColumn fx:id="dateColumn" text="Date" />
+                <TableColumn fx:id="typeColumn" text="Type" />
+                <TableColumn fx:id="statusColumn" text="Status" />
+            </columns>
+        </TableView>
+
+    </VBox>
+
+</AnchorPane>
