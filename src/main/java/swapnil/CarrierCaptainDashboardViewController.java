@@ -2,7 +2,6 @@ package swapnil;
 
 import NonUser.Aircraft;
 import NonUser.Mission;
-import User.User;
 import com.example.airplane_carrier_project_cse213.Helper;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
@@ -104,7 +103,7 @@ public class CarrierCaptainDashboardViewController
 
     @javafx.fxml.FXML
     public void incidentReportsPageBTN(ActionEvent actionEvent) throws IOException {
-        Helper.sceneSwitcher(actionEvent, "/com/example/airplane_carrier_project_cse213/swapnil/accidentReports-view.fxml");
+        Helper.sceneSwitcher(actionEvent, "/com/example/airplane_carrier_project_cse213/swapnil/incidentReports-view.fxml");
     }
 
     @javafx.fxml.FXML

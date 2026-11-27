@@ -1,8 +1,9 @@
 package NonUser;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class FlightSchedule {
+public class FlightSchedule implements Serializable {
     protected int flightId;
     protected String flightTime, flightStatus;
     protected LocalDate flightDate;
