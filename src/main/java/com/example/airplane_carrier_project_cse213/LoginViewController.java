@@ -95,7 +95,7 @@ public class LoginViewController
                 Helper.sceneSwitcher(actionEvent,"/com/example/airplane_carrier_project_cse213/swapnil/carrierCaptainDashboard-view.fxml");
             }
             else if(userRole.equals("Air Operation Officer")){
-                Helper.sceneSwitcher(actionEvent,"airOperationsOfficerDashboard-view.fxml");
+                Helper.sceneSwitcher(actionEvent,"/com/example/airplane_carrier_project_cse213/swapnil/airOperationsOfficerDashboard-view.fxml");
             }
             else if(userRole.equals("Pilot")){
 
