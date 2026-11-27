@@ -1,14 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="minhaz.MaintenanceLogisticsOfficerDashboardViewController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="minhaz.MaintenanceLogisticsOfficerDashboardViewController">
+    <children>
+        <Line endX="906.7269287109375" endY="-7.62939453125E-6" layoutX="125.0" layoutY="63.0" startX="-126.75154876708984" startY="-7.62939453125E-6" />
+        <Text layoutX="26.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aircraft Carrier Portal" wrappingWidth="407.9324188232422">
+            <font>
+                <Font name="Arial Black" size="24.0" />
+            </font>
+        </Text>
+        <Label alignment="CENTER" layoutX="659.0" layoutY="9.0" prefHeight="44.0" prefWidth="349.0" style="-fx-background-color: lightgreen;" text="Maintenance Logistics Officer">
+            <font>
+                <Font name="System Bold" size="21.0" />
+            </font>
+        </Label>
+        <Line endX="148.957763671875" endY="353.0" layoutX="111.0" layoutY="300.0" startX="148.95779418945312" startY="-183.50001525878906" />
+        <VBox layoutX="-1.0" layoutY="63.0" prefHeight="538.0" prefWidth="262.0" style="-fx-background-color: #f5f242;">
+            <children>
+                <Label alignment="CENTER" prefHeight="65.0" prefWidth="275.0" text="DASHBOARD" textAlignment="RIGHT">
+                    <font>
+                        <Font name="System Bold" size="32.0" />
+                    </font>
+                </Label>
+            </children></VBox>
+        <Button fx:id="aircraftStatusSceneButton" alignment="CENTER" layoutX="6.0" layoutY="127.0" mnemonicParsing="false" onAction="#aircraftStatusSceneButtonOnAction" prefHeight="37.0" prefWidth="242.0" text="Aircraft Status">
+            <font>
+                <Font name="Arial" size="19.0" />
+            </font>
+        </Button>
+        <Button fx:id="updateInventorySceneButton" alignment="CENTER" layoutX="6.0" layoutY="267.0" mnemonicParsing="false" onAction="#updateInventorySceneButtonOnAction" prefHeight="37.0" prefWidth="242.0" text="Update Inventory">
+            <font>
+                <Font name="Arial" size="19.0" />
+            </font>
+        </Button>
+        <Button fx:id="addInventorySceneButton" alignment="CENTER" layoutX="6.0" layoutY="220.0" mnemonicParsing="false" onAction="#addInventorySceneButtonOnAction" prefHeight="37.0" prefWidth="242.0" text="Inventory Addition">
+            <font>
+                <Font name="Arial" size="19.0" />
+            </font>
+        </Button>
+        <Button fx:id="sparePartsSceneButton" alignment="CENTER" layoutX="7.0" layoutY="315.0" mnemonicParsing="false" onAction="#sparePartsSceneButtonOnAction" prefHeight="37.0" prefWidth="242.0" text="Aircraft Spare Parts">
+            <font>
+                <Font name="Arial" size="19.0" />
+            </font>
+        </Button>
+        <Button fx:id="sparePartsReportScene" alignment="CENTER" layoutX="7.0" layoutY="362.0" mnemonicParsing="false" onAction="#sparePartsReportSceneOnAction" prefHeight="37.0" prefWidth="242.0" text="Spare Parts Report">
+            <font>
+                <Font name="Arial" size="19.0" />
+            </font>
+        </Button>
+        <Button fx:id="logOutButton" alignment="CENTER" layoutX="83.0" layoutY="537.0" mnemonicParsing="false" onAction="#logOutButtonOnAction" prefHeight="37.0" prefWidth="76.0" style="-fx-background-color: red;" text="Log Out" textFill="WHITE">
+            <font>
+                <Font name="Arial Bold" size="14.0" />
+            </font>
+        </Button>
+        <Button alignment="CENTER" layoutX="7.0" layoutY="410.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="242.0" text="n/a">
+            <font>
+                <Font name="Arial" size="19.0" />
+            </font>
+        </Button>
+        <VBox layoutX="302.0" layoutY="144.0" prefHeight="110.0" prefWidth="646.0" style="-fx-background-color: lightblue;">
+            <children>
+                <Label alignment="CENTER" prefHeight="43.0" prefWidth="649.0" text="Latest Addition">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+                <Label fx:id="aircraftReadyLabel" alignment="CENTER" prefHeight="69.0" prefWidth="653.0" text="waiting to load ....">
+                    <font>
+                        <Font size="45.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+        <Label alignment="CENTER" layoutX="300.0" layoutY="82.0" prefHeight="39.0" prefWidth="643.0" text="Welcome Officer">
+            <font>
+                <Font size="27.0" />
+            </font>
+        </Label>
+        <Button fx:id="reportInventorySceneButton" alignment="CENTER" layoutX="6.0" layoutY="173.0" mnemonicParsing="false" onAction="#reportInventorySceneButtonOnAction" prefHeight="37.0" prefWidth="242.0" text="Report Inventory">
+            <font>
+                <Font name="Arial" size="19.0" />
+            </font>
+        </Button>
+          <Label fx:id="crewNumberLabel" alignment="CENTER" layoutX="734.0" layoutY="358.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="70.0" prefWidth="205.0" style="-fx-background-color: lightgrey;" text="waiting">
+              <font>
+                  <Font size="24.0" />
+              </font>
+          </Label>
+          <Label alignment="CENTER" layoutX="299.0" layoutY="374.0" prefHeight="42.0" prefWidth="414.0" text="Inventory Restock Application Status">
+              <font>
+                  <Font size="24.0" />
+              </font>
+          </Label>
+      <Button alignment="CENTER" layoutX="8.0" layoutY="460.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="242.0" text="n/a">
+         <font>
+            <Font name="Arial" size="19.0" />
+         </font>
+      </Button>
+    </children>
 </AnchorPane>

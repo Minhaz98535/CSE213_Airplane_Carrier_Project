@@ -8,8 +8,7 @@ public class IncidentReport implements Serializable {
     protected LocalDate reportDate;
     protected String reportType, incidentLocation, damageSeverity, detailsReport, reportStatus;
 
-
-    public IncidentReport(Aircraft aircraftId, int reportId, LocalDate reportDate, String reportType, String incidentLocation, String damageSeverity, String detailsReport, String reportStatus) {
+    public IncidentReport(int reportId, LocalDate reportDate, String reportType, String incidentLocation, String damageSeverity, String detailsReport, String reportStatus) {
         this.reportId = reportId;
         this.reportDate = reportDate;
         this.reportType = reportType;
@@ -64,7 +63,7 @@ public class IncidentReport implements Serializable {
                 '}';
     }
 
-    public void updateReportStatus(String newReportStatus){
+    public void updateReportStatus(int reportId, String newReportStatus){
 
     }
 
