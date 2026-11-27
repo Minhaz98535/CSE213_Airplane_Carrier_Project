@@ -22,7 +22,7 @@
             <Font name="System Bold" size="21.0" />
          </font>
       </Label>
-      <Text layoutX="329.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-style: red\;" text=" Flight Status" textAlignment="CENTER" wrappingWidth="336.9729461669922">
+      <Text layoutX="329.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-style: red\;" text="Update Flight Status" textAlignment="CENTER" wrappingWidth="336.9729461669922">
          <font>
             <Font name="Times New Roman Bold" size="25.0" />
          </font>

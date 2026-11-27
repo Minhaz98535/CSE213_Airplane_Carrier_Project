@@ -10,7 +10,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="swapnil.aircraftAvailabilityStatusViewController">
    <children>
       <Line endX="906.7269287109375" endY="-7.62939453125E-6" layoutX="121.0" layoutY="71.0" startX="-126.75154876708984" startY="-7.62939453125E-6" />
@@ -29,7 +28,7 @@
             <Font name="Times New Roman Bold" size="25.0" />
          </font>
       </Text>
-      <Button layoutX="20.0" layoutY="525.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="103.0" style="-fx-background-color: pink;" text="Back">
+      <Button layoutX="20.0" layoutY="525.0" mnemonicParsing="false" onAction="#backToDashboardBTN" prefHeight="38.0" prefWidth="103.0" style="-fx-background-color: pink;" text="Back">
          <font>
             <Font name="System Bold" size="26.0" />
          </font>
@@ -39,11 +38,11 @@
             <Font name="System Bold Italic" size="17.0" />
          </font>
       </Text>
-      <TableView layoutX="140.0" layoutY="157.0" prefHeight="197.0" prefWidth="747.0">
+      <TableView fx:id="AircraftTableView" layoutX="140.0" layoutY="157.0" prefHeight="197.0" prefWidth="747.0">
          <columns>
-            <TableColumn prefWidth="208.80300903320312" text="Aircraft ID" />
-            <TableColumn prefWidth="285.6969909667969" text="Aircraft Type" />
-            <TableColumn prefWidth="252.23605346679688" text="Status" />
+            <TableColumn fx:id="aircraftIdCol" prefWidth="208.80300903320312" text="Aircraft ID" />
+            <TableColumn fx:id="aircraftTypeCol" prefWidth="285.6969909667969" text="Aircraft Type" />
+            <TableColumn fx:id="aircraftStatusCol" prefWidth="252.23605346679688" text="Status" />
          </columns>
       </TableView>
       <Text layoutX="230.0" layoutY="449.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filter by Status :">
@@ -51,8 +50,8 @@
             <Font size="15.0" />
          </font>
       </Text>
-      <ComboBox layoutX="348.0" layoutY="426.0" prefHeight="36.0" prefWidth="185.0" />
-      <Button layoutX="626.0" layoutY="420.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="176.0" text="Filter Aircraft">
+      <ComboBox fx:id="filterAircraftStatusCB" layoutX="348.0" layoutY="426.0" prefHeight="36.0" prefWidth="185.0" />
+      <Button layoutX="626.0" layoutY="420.0" mnemonicParsing="false" onAction="#filterAircraftByStatusBTN" prefHeight="48.0" prefWidth="176.0" text="Filter Aircraft">
          <font>
             <Font size="16.0" />
          </font>
