@@ -1,51 +1,107 @@
 package sohan;
 
+import NonUser.RepairRecord;
+
 import javafx.fxml.FXML;
 import javafx.event.ActionEvent;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
+
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
 
 public class MaintanceRecordController {
 
     @FXML
-    private TableView<MaintenanceRecord> maintenanceTable;
+    private TableView<RepairRecord> maintenanceTable;
 
     @FXML
-    private TableColumn<MaintenanceRecord, String> aircraftIdColumn;
+    private TableColumn<RepairRecord, String> recordIdColumn;
+
+    @FXML
+    private TableColumn<RepairRecord, String> aircraftIdColumn;
+
+    @FXML
+    private TableColumn<RepairRecord, String> dateColumn;
+
+    @FXML
+    private TableColumn<RepairRecord, String> typeColumn;
+
+    @FXML
+    private TableColumn<RepairRecord, String> statusColumn;
 
     @FXML
     private TextField searchField;
 
-    @FXML
-    private TableColumn<MaintenanceRecord, String> statusColumn;
-
-    @FXML
-    private TableColumn<MaintenanceRecord, String> recordIdColumn;
-
-    @FXML
-    private TableColumn<MaintenanceRecord, String> dateColumn;
-
-    @FXML
-    private TableColumn<MaintenanceRecord, String> typeColumn;
+    private ObservableList<RepairRecord> repairRecords;
+    private FilteredList<RepairRecord> filteredRecords;
 
     @FXML
     public void initialize() {
 
+        // Connect TableColumns with Model attributes
+        recordIdColumn.setCellValueFactory(
+                new PropertyValueFactory<>("recordId"));
+
+        aircraftIdColumn.setCellValueFactory(
+                new PropertyValueFactory<>("aircraftId"));
+
+        dateColumn.setCellValueFactory(
+                new PropertyValueFactory<>("date"));
+
+        typeColumn.setCellValueFactory(
+                new PropertyValueFactory<>("type"));
+
+        statusColumn.setCellValueFactory(
+                new PropertyValueFactory<>("status"));
+
+        // Sample records
+        repairRecords = FXCollections.observableArrayList(
+
+                new RepairRecord(
+                        "R001", "252622",
+                        "2026-11-20", "Engine Repair", "Completed"),
+
+                new RepairRecord(
+                        "R002", "252628",
+                        "2026-11-22", "Wing Repair", "Pending"),
+
+                new RepairRecord(
+                        "R003", "252622",
+                        "2026-11-25", "Fuel System", "Completed")
+        );
+
+        // Create FilteredList
+        filteredRecords = new FilteredList<>(
+                repairRecords, p -> true);
+
+        maintenanceTable.setItems(filteredRecords);
     }
 
     @FXML
     public void searchButton(ActionEvent actionEvent) {
 
-        String searchText = searchField.getText().trim();
+        String searchText = searchField.getText()
+                .trim().toLowerCase();
 
         if (searchText.isEmpty()) {
-            System.out.println("Please enter a Record ID or Aircraft ID.");
+
+            filteredRecords.setPredicate(record -> true);
             return;
         }
 
-        System.out.println("Searching for: " + searchText);
+        filteredRecords.setPredicate(record ->
 
-        // Ekhane maintenance records filter korbe.
+                record.getRecordId().toLowerCase()
+                        .contains(searchText)
+
+                        ||
+
+                        record.getAircraftId().toLowerCase()
+                                .contains(searchText)
+        );
     }
 }

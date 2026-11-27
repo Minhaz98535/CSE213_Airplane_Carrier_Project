@@ -11,7 +11,7 @@
       <VBox layoutY="14.0" prefHeight="200.0" prefWidth="412.0">
          <children>
             <CheckBox fx:id="fuellevelcheakedBox" mnemonicParsing="false" prefHeight="31.0" prefWidth="122.0" text="fuel level cheaked" />
-            <CheckBox mnemonicParsing="false" prefHeight="98.0" prefWidth="113.0" text="landing gear cheaked" />
+            <CheckBox fx:id="landingGearCheakBox" mnemonicParsing="false" prefHeight="98.0" prefWidth="113.0" text="landing gear cheaked" />
             <CheckBox fx:id="enginecheakedcheakbox" mnemonicParsing="false" prefHeight="89.0" prefWidth="117.0" text="Engine cheaked" />
             <CheckBox fx:id="communicationsystemcheaked" mnemonicParsing="false" prefHeight="43.0" prefWidth="227.0" text="communication system cheaked" />
          </children>

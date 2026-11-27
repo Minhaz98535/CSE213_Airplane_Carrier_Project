@@ -1,7 +1,7 @@
 
 package sohan;
 
-import Model.PreFlightChecklist;
+import NonUser.preFlightChecklist;
 import javafx.fxml.FXML;
 import javafx.event.ActionEvent;
 import javafx.scene.control.CheckBox;
@@ -13,7 +13,7 @@ public class preflightCheaklistController {
     private CheckBox fuellevelcheakedBox;
 
     @FXML
-    private CheckBox landinggearcheckedBox;
+    private CheckBox landingGearCheakBox;
 
     @FXML
     private CheckBox enginecheakedcheakbox;
@@ -33,7 +33,7 @@ public class preflightCheaklistController {
     public void cancelbutton(ActionEvent actionEvent) {
 
         fuellevelcheakedBox.setSelected(false);
-        landinggearcheckedBox.setSelected(false);
+        landingGearCheakBox.setSelected(false);
         enginecheakedcheakbox.setSelected(false);
         communicationsystemcheaked.setSelected(false);
 
@@ -43,9 +43,15 @@ public class preflightCheaklistController {
     @FXML
     public void submitbutton(ActionEvent actionEvent) {
 
-        boolean fuelChecked = fuellevelcheakedBox.isSelected();
-        boolean landingGearChecked = landinggearcheckedBox.isSelected();
-        boolean engineChecked = enginecheakedcheakbox.isSelected();
+        boolean fuelChecked =
+                fuellevelcheakedBox.isSelected();
+
+        boolean landingGearChecked =
+                landingGearCheakBox.isSelected();
+
+        boolean engineChecked =
+                enginecheakedcheakbox.isSelected();
+
         boolean communicationChecked =
                 communicationsystemcheaked.isSelected();
 
@@ -58,7 +64,7 @@ public class preflightCheaklistController {
             return;
         }
 
-        PreFlightChecklist checklist = new PreFlightChecklist(
+        preFlightChecklist checklist = new preFlightChecklist(
                 fuelChecked,
                 landingGearChecked,
                 engineChecked,
