@@ -28,7 +28,7 @@
             <Font name="Times New Roman Bold" size="25.0" />
          </font>
       </Text>
-      <Button layoutX="22.0" layoutY="527.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="103.0" style="-fx-background-color: pink;" text="Back">
+      <Button layoutX="22.0" layoutY="527.0" mnemonicParsing="false" onAction="#backToDashboardBTN" prefHeight="38.0" prefWidth="103.0" style="-fx-background-color: pink;" text="Back">
          <font>
             <Font name="System Bold" size="26.0" />
          </font>
@@ -38,13 +38,13 @@
             <Font name="System Bold Italic" size="17.0" />
          </font>
       </Text>
-      <TableView layoutX="63.0" layoutY="147.0" prefHeight="197.0" prefWidth="894.0">
+      <TableView fx:id="MissionTableView" layoutX="63.0" layoutY="147.0" prefHeight="197.0" prefWidth="894.0">
          <columns>
-            <TableColumn prefWidth="116.38148498535156" text="Mission ID" />
-            <TableColumn prefWidth="198.97686767578125" text="Mission Name" />
-            <TableColumn prefWidth="182.52313232421875" text="Mission Type" />
-            <TableColumn prefWidth="205.88723754882812" text="Planned Date" />
-            <TableColumn prefWidth="191.35821533203125" text="Priority" />
+            <TableColumn fx:id="missionIdCol" prefWidth="116.38148498535156" text="Mission ID" />
+            <TableColumn fx:id="missionNameCol" prefWidth="198.97686767578125" text="Mission Name" />
+            <TableColumn fx:id="missionTypeCol" prefWidth="182.52313232421875" text="Mission Type" />
+            <TableColumn fx:id="missionDateCol" prefWidth="205.88723754882812" text="Planned Date" />
+            <TableColumn fx:id="missionPriorityCol" prefWidth="191.35821533203125" text="Priority" />
          </columns>
       </TableView>
       <Text layoutX="27.0" layoutY="440.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Mission ID">
@@ -52,8 +52,8 @@
             <Font size="15.0" />
          </font>
       </Text>
-      <ComboBox layoutX="147.0" layoutY="418.0" prefHeight="36.0" prefWidth="185.0" />
-      <Button layoutX="736.0" layoutY="410.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="176.0" text="Update Priority">
+      <ComboBox fx:id="selectMissionIdCB" layoutX="147.0" layoutY="418.0" prefHeight="36.0" prefWidth="185.0" />
+      <Button layoutX="736.0" layoutY="410.0" mnemonicParsing="false" onAction="#updateMissionPriorityBTN" prefHeight="48.0" prefWidth="176.0" text="Update Priority">
          <font>
             <Font size="16.0" />
          </font>
@@ -68,6 +68,6 @@
             <Font size="15.0" />
          </font>
       </Text>
-      <ComboBox layoutX="477.0" layoutY="416.0" prefHeight="36.0" prefWidth="185.0" />
+      <ComboBox fx:id="selectMissionPriorityCB" layoutX="477.0" layoutY="416.0" prefHeight="36.0" prefWidth="185.0" />
    </children>
 </AnchorPane>
