@@ -4,7 +4,6 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
@@ -12,25 +11,25 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.airplane_carrier_project_cse213.RegisterViewController">
    <children>
-      <TextField layoutX="748.0" layoutY="231.0" prefHeight="25.0" prefWidth="180.0" />
+      <TextField fx:id="mobileTF" layoutX="748.0" layoutY="231.0" prefHeight="25.0" prefWidth="180.0" />
       <Text layoutX="681.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mobile No" />
       <Text layoutX="385.0" layoutY="386.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
       <Text layoutX="115.0" layoutY="386.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Role" />
-      <ComboBox layoutX="165.0" layoutY="368.0" prefHeight="25.0" prefWidth="180.0" />
-      <PasswordField layoutX="462.0" layoutY="368.0" prefHeight="25.0" prefWidth="180.0" />
-      <Button layoutX="475.0" layoutY="449.0" mnemonicParsing="false" onAction="#userRegisterBTN" prefHeight="46.0" prefWidth="99.0" style="-fx-background-color: lime;" text="Register">
+      <ComboBox fx:id="roleCB" layoutX="165.0" layoutY="368.0" prefHeight="25.0" prefWidth="180.0" />
+      <PasswordField fx:id="passwordTF" layoutX="462.0" layoutY="368.0" prefHeight="25.0" prefWidth="180.0" />
+      <Button layoutX="463.0" layoutY="449.0" mnemonicParsing="false" onAction="#userRegisterBTN" prefHeight="46.0" prefWidth="99.0" style="-fx-background-color: lime;" text="Register">
          <font>
             <Font name="System Bold Italic" size="14.0" />
          </font>
       </Button>
-      <Text layoutX="230.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aircraft Carrier Portal" wrappingWidth="527.48974609375">
+      <Text layoutX="235.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aircraft Carrier Portal" wrappingWidth="602.689697265625">
          <font>
             <Font size="59.0" />
          </font>
       </Text>
-      <TextField layoutX="164.0" layoutY="232.0" prefHeight="25.0" prefWidth="180.0" />
+      <TextField fx:id="fullNameTF" layoutX="164.0" layoutY="232.0" prefHeight="25.0" prefWidth="180.0" />
       <Text layoutX="111.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
-      <TextField layoutX="461.0" layoutY="232.0" prefHeight="25.0" prefWidth="180.0" />
+      <TextField fx:id="emailTF" layoutX="461.0" layoutY="232.0" prefHeight="25.0" prefWidth="180.0" />
       <Text layoutX="407.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
       <Text layoutX="350.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create Your Account" textAlignment="CENTER" wrappingWidth="324.32928466796875">
          <font>
@@ -39,8 +38,7 @@
       </Text>
       <Text layoutX="79.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date of Birth" />
       <Text layoutX="419.0" layoutY="318.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender :" />
-      <RadioButton layoutX="495.0" layoutY="304.0" mnemonicParsing="false" text="Male" />
-      <RadioButton layoutX="572.0" layoutY="303.0" mnemonicParsing="false" text="Female" />
-      <DatePicker layoutX="164.0" layoutY="297.0" />
+      <DatePicker fx:id="dateOfBirthDP" layoutX="164.0" layoutY="297.0" />
+      <ComboBox fx:id="genderCB" layoutX="480.0" layoutY="301.0" prefHeight="26.0" prefWidth="159.0" />
    </children>
 </AnchorPane>
