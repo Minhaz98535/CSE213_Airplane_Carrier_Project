@@ -12,22 +12,22 @@ public class UserManager {
         else if(role.equals("Air Operation Officer")){
             baseId = 262000;
         }
-        else if(role.equals("user 3")){
+        else if(role.equals("Pilot")){
             baseId = 263000;
         }
-        else if(role.equals("user 4")){
+        else if(role.equals("Aircraft Maintenance Engineer")){
             baseId = 264000;
         }
-        else if(role.equals("user 5")){
+        else if(role.equals("Flight Deck officer")){
             baseId = 265000;
         }
-        else if(role.equals("user 6")){
+        else if(role.equals("Maintenance Logistics Officer")){
             baseId = 266000;
         }
-        else if(role.equals("user 7")){
+        else if(role.equals("Carrier navigation officer")){
             baseId = 267000;
         }
-        else if(role.equals("user 8")){
+        else if(role.equals("Medical Officer")){
             baseId = 268000;
         }
         else{

@@ -1,8 +1,9 @@
 package User;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class User {
+public class User implements Serializable {
     protected String fullName, email, password, mobileNo, gender, role;
     protected LocalDate dateOfBirth;
     protected int userId;
