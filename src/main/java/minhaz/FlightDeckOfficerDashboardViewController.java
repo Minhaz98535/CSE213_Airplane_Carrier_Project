@@ -1,8 +1,11 @@
 package minhaz;
 
+import com.example.airplane_carrier_project_cse213.Helper;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+
+import java.io.IOException;
 
 public class FlightDeckOfficerDashboardViewController
 {
@@ -50,7 +53,8 @@ public class FlightDeckOfficerDashboardViewController
     }
 
     @javafx.fxml.FXML
-    public void logOutButtonOnAction(ActionEvent actionEvent) {
+    public void logOutButtonOnAction(ActionEvent actionEvent) throws IOException {
+        Helper.sceneSwitcher(actionEvent, "login-view.fxml");
     }
 
     @javafx.fxml.FXML
@@ -58,7 +62,8 @@ public class FlightDeckOfficerDashboardViewController
     }
 
     @javafx.fxml.FXML
-    public void IncidentReportSceneButton(ActionEvent actionEvent) {
+    public void IncidentReportSceneButton(ActionEvent actionEvent) throws IOException {
+        Helper.sceneSwitcher(actionEvent, "/com/example/airplane_carrier_project_cse213/minhaz/fdo-report-accidents-view.fxml");
     }
 
     @javafx.fxml.FXML

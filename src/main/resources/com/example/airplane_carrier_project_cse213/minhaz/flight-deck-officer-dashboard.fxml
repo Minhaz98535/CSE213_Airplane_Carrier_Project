@@ -23,13 +23,13 @@
         </Label>
         <Line endX="148.957763671875" endY="353.0" layoutX="111.0" layoutY="300.0" startX="148.95779418945312" startY="-183.50001525878906" />
         <VBox layoutX="-1.0" layoutY="63.0" prefHeight="538.0" prefWidth="262.0" style="-fx-background-color: #4287f5;">
-         <children>
-            <Label alignment="CENTER" prefHeight="65.0" prefWidth="275.0" text="DASHBOARD" textAlignment="RIGHT" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="32.0" />
-               </font>
-            </Label>
-         </children></VBox>
+            <children>
+                <Label alignment="CENTER" prefHeight="65.0" prefWidth="275.0" text="DASHBOARD" textAlignment="RIGHT" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="32.0" />
+                    </font>
+                </Label>
+            </children></VBox>
         <Button fx:id="emergencyMsgSceneButton" alignment="CENTER" layoutX="7.0" layoutY="136.0" mnemonicParsing="false" onAction="#emergencyMsgSceneButtonOnAction" prefHeight="37.0" prefWidth="242.0" text="Emergency Message">
             <font>
                 <Font name="Arial" size="19.0" />
@@ -72,11 +72,11 @@
                         <Font size="24.0" />
                     </font>
                 </Label>
-            <Label fx:id="aircraftReadyLabel" alignment="CENTER" prefHeight="69.0" prefWidth="653.0" text="waiting to load ....">
-               <font>
-                  <Font size="45.0" />
-               </font>
-            </Label>
+                <Label fx:id="aircraftReadyLabel" alignment="CENTER" prefHeight="69.0" prefWidth="653.0" text="waiting to load ....">
+                    <font>
+                        <Font size="45.0" />
+                    </font>
+                </Label>
             </children>
         </VBox>
         <Label alignment="CENTER" layoutX="300.0" layoutY="82.0" prefHeight="39.0" prefWidth="643.0" text="Welcome Officer">
@@ -89,24 +89,24 @@
                 <Font name="Arial" size="19.0" />
             </font>
         </Button>
-      <VBox layoutX="307.0" layoutY="340.0" prefHeight="110.0" prefWidth="638.0" style="-fx-background-color: lightblue;">
-         <children>
-            <Label alignment="CENTER" prefHeight="43.0" prefWidth="649.0" text="Crew On Board">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Label>
-            <Label fx:id="crewNumberLabel" alignment="CENTER" prefHeight="69.0" prefWidth="653.0" text="waiting to load ....">
-               <font>
-                  <Font size="45.0" />
-               </font>
-            </Label>
-         </children>
-      </VBox>
-      <Button fx:id="navigationSceneButton1" alignment="CENTER" layoutX="7.0" layoutY="482.0" mnemonicParsing="false" onAction="#navigationSceneButtonOnAction" prefHeight="37.0" prefWidth="242.0" text="Navigation Report">
-         <font>
-            <Font name="Arial" size="19.0" />
-         </font>
-      </Button>
+        <VBox layoutX="307.0" layoutY="340.0" prefHeight="110.0" prefWidth="638.0" style="-fx-background-color: lightblue;">
+            <children>
+                <Label alignment="CENTER" prefHeight="43.0" prefWidth="649.0" text="Crew On Board">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+                <Label fx:id="crewNumberLabel" alignment="CENTER" prefHeight="69.0" prefWidth="653.0" text="waiting to load ....">
+                    <font>
+                        <Font size="45.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+        <Button fx:id="navigationSceneButton1" alignment="CENTER" layoutX="7.0" layoutY="482.0" mnemonicParsing="false" onAction="#navigationSceneButtonOnAction" prefHeight="37.0" prefWidth="242.0" text="Navigation Report">
+            <font>
+                <Font name="Arial" size="19.0" />
+            </font>
+        </Button>
     </children>
 </AnchorPane>
