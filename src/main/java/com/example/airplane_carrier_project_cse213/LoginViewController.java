@@ -1,10 +1,12 @@
 package com.example.airplane_carrier_project_cse213;
 
+import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class LoginViewController
@@ -69,5 +71,10 @@ public class LoginViewController
             s.showAndWait();
         }
 
+    }
+
+    @javafx.fxml.FXML
+    public void userRegisterBTN(ActionEvent actionEvent) throws IOException {
+        Helper.sceneSwitcher(actionEvent,"register-view.fxml");
     }
 }

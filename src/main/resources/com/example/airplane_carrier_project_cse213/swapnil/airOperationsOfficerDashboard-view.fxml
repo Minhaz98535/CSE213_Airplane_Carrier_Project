@@ -55,7 +55,7 @@
                 <Font name="Arial" size="19.0" />
             </font>
         </Button>
-        <Button alignment="CENTER" layoutX="7.0" layoutY="327.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="242.0" text="Launch Sequence">
+        <Button alignment="CENTER" layoutX="7.0" layoutY="327.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="242.0" text="Monitor Missions">
             <font>
                 <Font name="Arial" size="19.0" />
             </font>
@@ -70,7 +70,7 @@
                 <Font name="Arial" size="19.0" />
             </font>
         </Button>
-        <VBox layoutX="302.0" layoutY="119.0" prefHeight="109.0" prefWidth="310.0" style="-fx-background-color: lightblue;">
+        <VBox layoutX="302.0" layoutY="145.0" prefHeight="109.0" prefWidth="310.0" style="-fx-background-color: lightblue;">
             <children>
                 <Label alignment="CENTER" prefHeight="47.0" prefWidth="310.0" text="Scheduled Flights">
                     <font>
@@ -84,7 +84,7 @@
                 </Label>
             </children>
         </VBox>
-        <VBox layoutX="674.0" layoutY="119.0" prefHeight="109.0" prefWidth="310.0" style="-fx-background-color: lightblue;">
+        <VBox layoutX="674.0" layoutY="145.0" prefHeight="109.0" prefWidth="310.0" style="-fx-background-color: lightblue;">
             <children>
                 <Label alignment="CENTER" prefHeight="50.0" prefWidth="310.0" text="Aircraft Ready">
                     <font>
@@ -98,12 +98,7 @@
                 </Label>
             </children>
         </VBox>
-        <Label layoutX="273.0" layoutY="240.0" prefHeight="38.0" prefWidth="232.0" text="Today's Flight Operations">
-            <font>
-                <Font size="20.0" />
-            </font>
-        </Label>
-        <Label layoutX="277.0" layoutY="440.0" prefHeight="38.0" prefWidth="232.0" text="Emergency Notifications">
+        <Label layoutX="275.0" layoutY="302.0" prefHeight="38.0" prefWidth="232.0" text="Today's Flight Operations">
             <font>
                 <Font size="20.0" />
             </font>
@@ -118,7 +113,7 @@
             <Font name="Arial" size="19.0" />
          </font>
       </Button>
-      <TableView layoutX="276.0" layoutY="277.0" prefHeight="147.0" prefWidth="708.0">
+      <TableView layoutX="278.0" layoutY="356.0" prefHeight="147.0" prefWidth="708.0">
         <columns>
           <TableColumn prefWidth="170.2760009765625" text="Flight ID" />
           <TableColumn prefWidth="292.47821044921875" text="Aircraft" />

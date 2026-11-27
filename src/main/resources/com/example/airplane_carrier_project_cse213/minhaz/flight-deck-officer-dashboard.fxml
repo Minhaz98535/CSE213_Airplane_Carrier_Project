@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane
+        maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1"
+        fx:controller="minhaz.FlightDeckOfficerDashboardViewController">
+    <children>
+        <Line endX="906.7269287109375" endY="-7.62939453125E-6" layoutX="125.0" layoutY="63.0" startX="-126.75154876708984" startY="-7.62939453125E-6" />
+        <Text layoutX="26.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aircraft Carrier Portal" wrappingWidth="407.9324188232422">
+            <font>
+                <Font name="Arial Black" size="31.0" />
+            </font>
+        </Text>
+        <Label alignment="CENTER" layoutX="810.0" layoutY="9.0" prefHeight="44.0" prefWidth="198.0" style="-fx-background-color: lightgreen;" text="Captain Panel">
+            <font>
+                <Font name="System Bold" size="21.0" />
+            </font>
+        </Label>
+        <Line endX="148.957763671875" endY="353.0" layoutX="111.0" layoutY="300.0" startX="148.95779418945312" startY="-183.50001525878906" />
+        <VBox layoutX="-1.0" layoutY="63.0" prefHeight="538.0" prefWidth="261.0" style="-fx-background-color: #1E293B;" />
+        <Text layoutX="272.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DASHBOARD" wrappingWidth="173.9324188232422">
+            <font>
+                <Font name="Times New Roman Bold" size="25.0" />
+            </font>
+        </Text>
+        <Button alignment="CENTER" layoutX="6.0" layoutY="92.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="242.0" text="Dashboard">
+            <font>
+                <Font name="Arial" size="19.0" />
+            </font>
+        </Button>
+        <Button alignment="CENTER" layoutX="6.0" layoutY="143.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="242.0" text="Missions Management">
+            <font>
+                <Font name="Arial" size="19.0" />
+            </font>
+        </Button>
+        <Button alignment="CENTER" layoutX="7.0" layoutY="296.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="242.0" text="Aircraft Status">
+            <font>
+                <Font name="Arial" size="19.0" />
+            </font>
+        </Button>
+        <Button alignment="CENTER" layoutX="7.0" layoutY="247.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="242.0" text="Flight Schedule">
+            <font>
+                <Font name="Arial" size="19.0" />
+            </font>
+        </Button>
+        <Button alignment="CENTER" layoutX="7.0" layoutY="345.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="242.0" text="Accident Reports">
+            <font>
+                <Font name="Arial" size="19.0" />
+            </font>
+        </Button>
+        <Button alignment="CENTER" layoutX="7.0" layoutY="395.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="242.0" text="Emergency Alert">
+            <font>
+                <Font name="Arial" size="19.0" />
+            </font>
+        </Button>
+        <Button alignment="CENTER" layoutX="83.0" layoutY="537.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="76.0" style="-fx-background-color: red;" text="Log Out" textFill="WHITE">
+            <font>
+                <Font name="Arial Bold Italic" size="14.0" />
+            </font>
+        </Button>
+        <Button alignment="CENTER" layoutX="8.0" layoutY="446.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="242.0" text="Inbox">
+            <font>
+                <Font name="Arial" size="19.0" />
+            </font>
+        </Button>
+        <VBox layoutX="302.0" layoutY="144.0" prefHeight="109.0" prefWidth="310.0" style="-fx-background-color: lightblue;">
+            <children>
+                <Label alignment="CENTER" prefHeight="47.0" prefWidth="310.0" text="Active Mission">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER" prefHeight="77.0" prefWidth="310.0" text="07">
+                    <font>
+                        <Font size="45.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+        <VBox layoutX="674.0" layoutY="144.0" prefHeight="109.0" prefWidth="310.0" style="-fx-background-color: lightblue;">
+            <children>
+                <Label alignment="CENTER" prefHeight="50.0" prefWidth="310.0" text="Aircraft Ready">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER" prefHeight="77.0" prefWidth="310.0" text="07">
+                    <font>
+                        <Font size="45.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+        <Label layoutX="273.0" layoutY="336.0" prefHeight="38.0" prefWidth="232.0" text="Pending Flight Approval">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label layoutX="277.0" layoutY="436.0" prefHeight="38.0" prefWidth="232.0" text="Recent Message">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label layoutX="275.0" layoutY="105.0" prefHeight="21.0" prefWidth="121.0" text="Welcome Captain">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Button alignment="CENTER" layoutX="7.0" layoutY="196.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="242.0" text="Set Mission Priority">
+            <font>
+                <Font name="Arial" size="19.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>
