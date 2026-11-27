@@ -1,6 +1,8 @@
 package sifat7175;
 
 import javafx.event.ActionEvent;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextArea;
 
 public class CarrierNavigationContactCaptainCViewController
 {

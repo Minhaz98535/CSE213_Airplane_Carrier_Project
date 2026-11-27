@@ -1,5 +1,7 @@
 package sifat7175;
 
+import javafx.event.ActionEvent;
+
 public class CarrierNavigationWindSpeedDirectionViewController
 {
     @javafx.fxml.FXML

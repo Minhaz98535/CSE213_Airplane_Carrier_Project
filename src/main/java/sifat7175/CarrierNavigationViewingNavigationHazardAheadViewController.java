@@ -1,5 +1,9 @@
 package sifat7175;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+
 public class CarrierNavigationViewingNavigationHazardAheadViewController
 {
     @javafx.fxml.FXML
