@@ -7,6 +7,8 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 
+import NonUser.WeatherInfo;
+
 public class WeatherController {
 
     @FXML

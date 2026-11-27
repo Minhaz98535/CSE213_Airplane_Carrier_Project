@@ -1,5 +1,6 @@
 package sohan;
 
+import NonUser.FlightClearance;
 import javafx.fxml.FXML;
 import javafx.event.ActionEvent;
 import javafx.scene.control.ComboBox;
@@ -10,13 +11,13 @@ import javafx.scene.control.TableView;
 public class requestClearanceController {
 
     @FXML
-    private TableColumn<?, ?> flightidCol;
+    private TableColumn<FlightClearance,Integer> flightidCol;
 
     @FXML
-    private TableColumn<?, ?> aircraftidCol;
+    private TableColumn<FlightClearance,Integer> aircraftidCol;
 
     @FXML
-    private TableColumn<?, ?> missonCol;
+    private TableColumn<FlightClearance,String> missionCol;
 
     @FXML
     private Label showaicraftnotreadymassage;

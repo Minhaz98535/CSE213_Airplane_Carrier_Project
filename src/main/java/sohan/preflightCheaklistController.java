@@ -1,5 +1,7 @@
+
 package sohan;
 
+import Model.PreFlightChecklist;
 import javafx.fxml.FXML;
 import javafx.event.ActionEvent;
 import javafx.scene.control.CheckBox;
@@ -9,6 +11,9 @@ public class preflightCheaklistController {
 
     @FXML
     private CheckBox fuellevelcheakedBox;
+
+    @FXML
+    private CheckBox landinggearcheckedBox;
 
     @FXML
     private CheckBox enginecheakedcheakbox;
@@ -28,34 +33,42 @@ public class preflightCheaklistController {
     public void cancelbutton(ActionEvent actionEvent) {
 
         fuellevelcheakedBox.setSelected(false);
+        landinggearcheckedBox.setSelected(false);
         enginecheakedcheakbox.setSelected(false);
         communicationsystemcheaked.setSelected(false);
 
+        preflightCheakedlistfxid.setText("Checklist Reset");
     }
 
     @FXML
     public void submitbutton(ActionEvent actionEvent) {
 
         boolean fuelChecked = fuellevelcheakedBox.isSelected();
+        boolean landingGearChecked = landinggearcheckedBox.isSelected();
         boolean engineChecked = enginecheakedcheakbox.isSelected();
         boolean communicationChecked =
                 communicationsystemcheaked.isSelected();
 
-        if (!fuelChecked || !engineChecked || !communicationChecked) {
+        if (!fuelChecked || !landingGearChecked ||
+                !engineChecked || !communicationChecked) {
 
             preflightCheakedlistfxid.setText(
                     "Please complete all checklist items!"
             );
-
             return;
         }
+
+        PreFlightChecklist checklist = new PreFlightChecklist(
+                fuelChecked,
+                landingGearChecked,
+                engineChecked,
+                communicationChecked
+        );
 
         preflightCheakedlistfxid.setText(
                 "Pre-flight checklist completed!"
         );
 
-        System.out.println("Fuel Level: Checked");
-        System.out.println("Engine: Checked");
-        System.out.println("Communication System: Checked");
+        System.out.println(checklist);
     }
 }

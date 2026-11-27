@@ -1,10 +1,11 @@
 package sohan;
-
+import NonUser.IssueReport;
 import javafx.fxml.FXML;
 import javafx.event.ActionEvent;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
+
 
 public class ReportAircraftIssueController {
 
@@ -87,7 +88,15 @@ public class ReportAircraftIssueController {
             statusmassage.setVisible(true);
             return;
         }
+        IssueReport report = new IssueReport(
+                aircraftId,
+                severity,
+                category,
+                problem,
+                observation
+        );
 
+        System.out.println(report);
         statusmassage.setText("Issue report submitted successfully.");
         statusmassage.setVisible(true);
 

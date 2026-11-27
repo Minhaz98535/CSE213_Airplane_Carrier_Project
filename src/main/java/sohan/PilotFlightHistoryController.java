@@ -1,5 +1,6 @@
 package sohan;
 
+import NonUser.FlightReport;
 import javafx.fxml.FXML;
 import javafx.event.ActionEvent;
 import javafx.scene.control.DatePicker;
@@ -10,16 +11,16 @@ import javafx.scene.control.TableView;
 public class PilotFlightHistoryController {
 
     @FXML
-    private TableColumn<?, ?> flightidCol;
+    private TableColumn<FlightReport,Integer> flightidCol;
 
     @FXML
-    private TableColumn<?, ?> arrivalCol;
+    private TableColumn<FlightReport,String> arrivalCol;
 
     @FXML
-    private TableColumn<?, ?> aircraftIdCol;
+    private TableColumn<FlightReport,Integer> aircraftIdCol;
 
     @FXML
-    private TableColumn<?, ?> statusCol;
+    private TableColumn<FlightReport,String> statusCol;
 
     @FXML
     private Label noflighthistorymassage;

@@ -7,8 +7,7 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/27.0.1.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sohan.requestClearanceController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sohan.requestClearanceController">
    <children>
       <Label layoutX="33.0" layoutY="22.0" text="Request flight Clearance" />
       <ComboBox fx:id="flightComboBox" layoutX="76.0" layoutY="54.0" prefHeight="26.0" prefWidth="223.0" promptText="flight" />
@@ -16,7 +15,7 @@
         <columns>
           <TableColumn fx:id="flightidCol" prefWidth="116.0" text="flight id" />
           <TableColumn fx:id="aircraftidCol" prefWidth="105.0" text="aircraft id" />
-            <TableColumn fx:id="missonCol" prefWidth="112.0" text="misson" />
+            <TableColumn fx:id="missonCol" prefWidth="112.0" text="mission" />
             <TableColumn fx:id="timeCol" prefWidth="130.0" text="time" />
             <TableColumn fx:id="statusCol" prefWidth="130.0" text="status" />
         </columns>
