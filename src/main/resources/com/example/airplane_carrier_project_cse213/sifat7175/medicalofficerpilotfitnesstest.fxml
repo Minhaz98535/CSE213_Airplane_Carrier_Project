@@ -4,6 +4,7 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
@@ -28,25 +29,21 @@
                 <Font name="System Bold" size="26.0" />
             </font>
         </Button>
-      <TextField fx:id="nameTF" layoutX="22.0" layoutY="104.0" promptText="Name" />
-      <TextField fx:id="idTF" layoutX="253.0" layoutY="104.0" promptText="ID" />
+      <TextField fx:id="idTF" layoutX="24.0" layoutY="104.0" promptText="Pilot ID" />
       <ComboBox fx:id="examstatusCMB" layoutX="486.0" layoutY="104.0" prefWidth="150.0" promptText="Exam status" />
-      <ComboBox fx:id="examtypeCMB" layoutX="22.0" layoutY="191.0" prefWidth="150.0" promptText="Exam Type" />
-      <DatePicker fx:id="examdateDatepicker" layoutX="240.0" layoutY="191.0" promptText="Exam Date" />
-      <TextField fx:id="visionTF" layoutX="487.0" layoutY="191.0" promptText="Vision" />
-      <TextField fx:id="hearingTF" layoutX="738.0" layoutY="191.0" promptText="Hearing" />
+      <DatePicker fx:id="examdateDatepicker" layoutX="24.0" layoutY="176.0" promptText="Exam Date" />
       <TextField fx:id="bloodpressureTF" layoutX="739.0" layoutY="104.0" promptText="Blood pressure" />
-      <TextField fx:id="heartrateTF" layoutX="23.0" layoutY="275.0" promptText="Heart rate" />
-      <TextField fx:id="ecgTF" layoutX="240.0" layoutY="275.0" promptText="ECG" />
-      <TextField fx:id="labandbloodtestsTF" layoutX="488.0" layoutY="275.0" promptText="Lab and blood tests" />
-      <TextField fx:id="lungfunctionTF" layoutX="730.0" layoutY="275.0" promptText="Lung function" />
-      <TextField fx:id="mentalhealthscreeningTF" layoutX="24.0" layoutY="373.0" promptText="Mental health screening" />
-      <TextField fx:id="allergiesTF" layoutX="241.0" layoutY="373.0" promptText="Allergies" />
-      <TextField fx:id="medicationsTF" layoutX="487.0" layoutY="373.0" promptText="Medications" />
-      <Button layoutX="433.0" layoutY="468.0" mnemonicParsing="false" onAction="#submitOAC" prefHeight="31.0" prefWidth="138.0" style="-fx-background-color: lightblue;" text="Submit">
+      <TextField fx:id="heartrateTF" layoutX="265.0" layoutY="104.0" promptText="Heart rate" />
+      <Button layoutX="462.0" layoutY="498.0" mnemonicParsing="false" onAction="#submitOAC" prefHeight="31.0" prefWidth="138.0" style="-fx-background-color: lightblue;" text="Submit">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
+      <TextArea fx:id="descriptionTA" layoutX="24.0" layoutY="252.0" prefHeight="223.0" prefWidth="960.0" />
+      <Text layoutX="420.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" wrappingWidth="432.68170166015625">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Text>
     </children>
 </AnchorPane>

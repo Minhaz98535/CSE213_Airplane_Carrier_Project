@@ -34,7 +34,7 @@
          </font>
       </Text>
       <TextField fx:id="nameTF" layoutX="36.0" layoutY="130.0" promptText="Name" />
-      <TextField fx:id="idTC" layoutX="247.0" layoutY="130.0" promptText="ID" />
+      <TextField fx:id="idTF" layoutX="247.0" layoutY="130.0" promptText="ID" />
       <Button layoutX="722.0" layoutY="130.0" mnemonicParsing="false" onAction="#searchOAC" prefHeight="26.0" prefWidth="121.0" style="-fx-background-color: lightblue;" text="Search">
          <font>
             <Font name="System Bold" size="11.0" />
@@ -47,14 +47,13 @@
       </Text>
       <TableView fx:id="medicalhistoryTableView" layoutX="36.0" layoutY="258.0" prefHeight="200.0" prefWidth="891.0">
         <columns>
-          <TableColumn fx:id="dateTC" prefWidth="75.0" text="Date" />
-            <TableColumn fx:id="casetypeTC" prefWidth="113.60004425048828" text="Case Type" />
-            <TableColumn fx:id="diagnosisTC" prefWidth="103.99992370605469" text="Diagnosis" />
-            <TableColumn fx:id="bloodGroupTC" prefWidth="123.20001220703125" text="Blood Group" />
-            <TableColumn fx:id="Allergy" prefWidth="90.4000244140625" text="Allergy" />
-            <TableColumn fx:id="treatmentTC" prefWidth="124.800048828125" text="Treatment" />
-            <TableColumn fx:id="medicalofficerTC" prefWidth="101.5999755859375" text="Medical Officer" />
-          <TableColumn fx:id="symptomsTC" prefWidth="160.7999267578125" text="Symptoms" />
+            <TableColumn fx:id="diseaseTC" prefWidth="147.1999855041504" text="Disease" />
+            <TableColumn fx:id="isolationTC" prefWidth="145.59999084472656" text="Isolation" />
+            <TableColumn fx:id="idTC" prefWidth="98.4000244140625" text="ID" />
+            <TableColumn fx:id="statusTC" prefWidth="112.79998779296875" text="Status" />
+            <TableColumn fx:id="departmentTC" prefWidth="112.79998779296875" text="department" />
+            <TableColumn fx:id="nameTC" prefWidth="140.79998779296875" text="Name" />
+          <TableColumn fx:id="dateTC" prefWidth="134.4000244140625" text="Date" />
         </columns>
       </TableView>
       <TextField fx:id="departmentTF" layoutX="472.0" layoutY="131.0" promptText="Department" />

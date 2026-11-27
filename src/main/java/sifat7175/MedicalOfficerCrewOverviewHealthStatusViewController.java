@@ -15,29 +15,25 @@ public class MedicalOfficerCrewOverviewHealthStatusViewController
     @javafx.fxml.FXML
     private TableView crewoverviewhealthstatusTV;
     @javafx.fxml.FXML
-    private TableColumn conditionTC;
-    @javafx.fxml.FXML
-    private TableColumn rankTC;
-    @javafx.fxml.FXML
-    private TableColumn dutyStatusTC;
-    @javafx.fxml.FXML
-    private ComboBox filterRankCMB;
-    @javafx.fxml.FXML
     private Label onsickcalllable;
-    @javafx.fxml.FXML
-    private ComboBox filterdutyStatusCMB;
     @javafx.fxml.FXML
     private TableColumn departmentTC;
     @javafx.fxml.FXML
     private Label totalcrewlable;
     @javafx.fxml.FXML
-    private ComboBox filteronboardCMB;
-    @javafx.fxml.FXML
     private ComboBox filterdeptCMB;
     @javafx.fxml.FXML
-    private ComboBox filterconditionCMB;
-    @javafx.fxml.FXML
     private TableColumn crewidTC;
+    @javafx.fxml.FXML
+    private TableColumn diseaseTC;
+    @javafx.fxml.FXML
+    private DatePicker dateDatepicker;
+    @javafx.fxml.FXML
+    private TableColumn statusTC;
+    @javafx.fxml.FXML
+    private TableColumn isolationTC;
+    @javafx.fxml.FXML
+    private TextField statusTF;
 
     @javafx.fxml.FXML
     public void initialize() {

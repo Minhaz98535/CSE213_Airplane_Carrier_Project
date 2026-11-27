@@ -8,29 +8,27 @@ import javafx.scene.control.TextField;
 public class MedicalOfficerViewindividualCrewHistoryViewController
 {
     @javafx.fxml.FXML
-    private TableColumn Allergy;
-    @javafx.fxml.FXML
     private TextField nameTF;
     @javafx.fxml.FXML
-    private TableColumn medicalofficerTC;
-    @javafx.fxml.FXML
     private TableView medicalhistoryTableView;
-    @javafx.fxml.FXML
-    private TableColumn casetypeTC;
-    @javafx.fxml.FXML
-    private TableColumn bloodGroupTC;
-    @javafx.fxml.FXML
-    private TableColumn symptomsTC;
-    @javafx.fxml.FXML
-    private TableColumn diagnosisTC;
-    @javafx.fxml.FXML
-    private TableColumn treatmentTC;
-    @javafx.fxml.FXML
-    private TextField idTC;
     @javafx.fxml.FXML
     private TableColumn dateTC;
     @javafx.fxml.FXML
     private TextField departmentTF;
+    @javafx.fxml.FXML
+    private TableColumn diseaseTC;
+    @javafx.fxml.FXML
+    private TableColumn nameTC;
+    @javafx.fxml.FXML
+    private TableColumn statusTC;
+    @javafx.fxml.FXML
+    private TableColumn idTC;
+    @javafx.fxml.FXML
+    private TableColumn departmentTC;
+    @javafx.fxml.FXML
+    private TextField idTF;
+    @javafx.fxml.FXML
+    private TableColumn isolationTC;
 
     @javafx.fxml.FXML
     public void initialize() {

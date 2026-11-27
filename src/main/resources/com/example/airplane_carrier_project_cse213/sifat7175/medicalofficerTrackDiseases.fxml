@@ -36,8 +36,8 @@
       </Text>
       <TableView fx:id="diseasetracking" layoutX="53.0" layoutY="300.0" prefHeight="200.0" prefWidth="910.0">
         <columns>
-          <TableColumn fx:id="caseidTC" prefWidth="108.79999160766602" text="Case ID" />
-          <TableColumn fx:id="patientTC" prefWidth="99.99998474121094" text="Patient" />
+          <TableColumn fx:id="caseidTC" prefWidth="108.79999160766602" text="ID" />
+          <TableColumn fx:id="patientTC" prefWidth="99.99998474121094" text="Patient Name" />
             <TableColumn fx:id="departmentTC" prefWidth="160.00006103515625" text="Department" />
             <TableColumn fx:id="diseaseTC" prefWidth="134.39996337890625" text="Disease" />
             <TableColumn fx:id="statusTC" prefWidth="119.20001220703125" text="Status" />
@@ -48,8 +48,12 @@
       <ComboBox fx:id="diseaseCMB" layoutX="53.0" layoutY="145.0" prefWidth="150.0" promptText="Disease" />
       <ComboBox fx:id="statusCCMB" layoutX="272.0" layoutY="145.0" prefWidth="150.0" promptText="Status" />
       <ComboBox fx:id="departmentCMB" layoutX="484.0" layoutY="145.0" prefWidth="150.0" promptText="Department" />
-      <ComboBox fx:id="compartmentCMB" layoutX="720.0" layoutY="145.0" prefWidth="150.0" promptText="Compartment" />
-      <ComboBox fx:id="vaccinationstatusCMB" layoutX="53.0" layoutY="224.0" prefWidth="150.0" promptText="Vaccination status" />
-      <DatePicker fx:id="dateDatepickerS" layoutX="260.0" layoutY="224.0" promptText="Date" />
+      <DatePicker fx:id="dateDatePicker" layoutX="707.0" layoutY="145.0" promptText="Date" />
+      <Text layoutX="473.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tracking">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Text>
+      <Button layoutX="420.0" layoutY="195.0" mnemonicParsing="false" onAction="#enterbuttonOAC" prefHeight="26.0" prefWidth="222.0" text="Enter" />
     </children>
 </AnchorPane>

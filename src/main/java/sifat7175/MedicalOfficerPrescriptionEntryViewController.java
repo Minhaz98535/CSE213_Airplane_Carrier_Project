@@ -7,31 +7,13 @@ import javafx.scene.control.TextField;
 public class MedicalOfficerPrescriptionEntryViewController
 {
     @javafx.fxml.FXML
-    private TextField durationTF;
-    @javafx.fxml.FXML
-    private TextField nameTF;
-    @javafx.fxml.FXML
-    private TextField frequencyTF;
-    @javafx.fxml.FXML
-    private TextField routeTF;
-    @javafx.fxml.FXML
     private TextField departmentTF;
-    @javafx.fxml.FXML
-    private TextField instructionTF;
-    @javafx.fxml.FXML
-    private TextField doseTF;
-    @javafx.fxml.FXML
-    private TextField notesTF;
-    @javafx.fxml.FXML
-    private ComboBox dutyrestrictionCMB;
     @javafx.fxml.FXML
     private TextField idTF;
     @javafx.fxml.FXML
-    private TextField quantityTF;
+    private DatePicker dateDatePicker;
     @javafx.fxml.FXML
-    private TextField diagnosisorreasonTF;
-    @javafx.fxml.FXML
-    private TextField medicationTF;
+    private TextArea descriptionTA;
 
     @javafx.fxml.FXML
     public void initialize() {

@@ -11,10 +11,6 @@ public class MedicalOfficerTrackDisease
     @javafx.fxml.FXML
     private TableColumn diseaseTC;
     @javafx.fxml.FXML
-    private DatePicker dateDatepickerS;
-    @javafx.fxml.FXML
-    private ComboBox compartmentCMB;
-    @javafx.fxml.FXML
     private ComboBox statusCCMB;
     @javafx.fxml.FXML
     private TableColumn departmentTC;
@@ -29,13 +25,13 @@ public class MedicalOfficerTrackDisease
     @javafx.fxml.FXML
     private TableColumn caseidTC;
     @javafx.fxml.FXML
-    private ComboBox vaccinationstatusCMB;
-    @javafx.fxml.FXML
     private TableColumn statusTC;
     @javafx.fxml.FXML
     private ComboBox diseaseCMB;
     @javafx.fxml.FXML
     private TableColumn isolationTC;
+    @javafx.fxml.FXML
+    private DatePicker dateDatePicker;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -43,5 +39,9 @@ public class MedicalOfficerTrackDisease
 
     @javafx.fxml.FXML
     public void backOnActionButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void enterbuttonOAC(ActionEvent actionEvent) {
     }
 }
