@@ -1,37 +1,95 @@
 package sohan;
 
-public class WeatherController
-{
-    @javafx.fxml.FXML
+import javafx.fxml.FXML;
+import javafx.event.ActionEvent;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
+import javafx.scene.layout.GridPane;
+
+public class WeatherController {
+
+    @FXML
     private Label windSpeedfxid;
-    @javafx.fxml.FXML
+
+    @FXML
     private Label conditionFxid;
-    @javafx.fxml.FXML
-    private ComboBox loactionfxid;
-    @javafx.fxml.FXML
+
+    @FXML
+    private ComboBox<String> loactionfxid;
+
+    @FXML
     private GridPane weatherinfoshowfxid;
-    @javafx.fxml.FXML
+
+    @FXML
     private DatePicker datepickerdate;
-    @javafx.fxml.FXML
+
+    @FXML
     private Label weatherinformationcurrentlyUnavailable;
-    @javafx.fxml.FXML
+
+    @FXML
     private Label weatherinfofxid;
-    @javafx.fxml.FXML
+
+    @FXML
     private Label Visibilityfxid;
-    @javafx.fxml.FXML
+
+    @FXML
     private Label WindDirectionfxid;
-    @javafx.fxml.FXML
+
+    @FXML
     private Label temparaturefxid;
 
-    @javafx.fxml.FXML
+    @FXML
     public void initialize() {
+
+        loactionfxid.getItems().setAll(
+                "Dhaka",
+                "Chattogram",
+                "Sylhet",
+                "Rajshahi",
+                "Khulna"
+        );
+
+        weatherinformationcurrentlyUnavailable.setVisible(false);
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void ShowWeatherButton(ActionEvent actionEvent) {
+
+        String location = loactionfxid.getValue();
+
+        if (location == null || datepickerdate.getValue() == null) {
+
+            weatherinformationcurrentlyUnavailable.setText(
+                    "Please select location and date."
+            );
+
+            weatherinformationcurrentlyUnavailable.setVisible(true);
+            return;
+        }
+
+        weatherinformationcurrentlyUnavailable.setText(
+                "Weather data is currently unavailable."
+        );
+
+        weatherinformationcurrentlyUnavailable.setVisible(true);
+
+        System.out.println("Location: " + location);
+        System.out.println("Date: " + datepickerdate.getValue());
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void refreshWeatherbButton(ActionEvent actionEvent) {
+
+        loactionfxid.getSelectionModel().clearSelection();
+        datepickerdate.setValue(null);
+
+        windSpeedfxid.setText("-");
+        conditionFxid.setText("-");
+        Visibilityfxid.setText("-");
+        WindDirectionfxid.setText("-");
+        temparaturefxid.setText("-");
+
+        weatherinformationcurrentlyUnavailable.setVisible(false);
     }
 }
