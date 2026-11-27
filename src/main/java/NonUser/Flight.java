@@ -1,29 +1,27 @@
-package User;
+package NonUser;
 
-public class flight {
+public class Flight {
+
     private String flightId;
     private String destination;
     private String date;
     private String launchTime;
     private String status;
 
-    public flight() {
-    }
-
-    public flight(String flightId, String destination, String date, String launchTime, String status) {
+    public Flight(String flightId, String date, String destination, String launchTime, String status) {
         this.flightId = flightId;
-        this.destination = destination;
         this.date = date;
+        this.destination = destination;
         this.launchTime = launchTime;
         this.status = status;
     }
 
-    public String getFlightId() {
-        return flightId;
+    public String getDate() {
+        return date;
     }
 
-    public void setFlightId(String flightId) {
-        this.flightId = flightId;
+    public void setDate(String date) {
+        this.date = date;
     }
 
     public String getDestination() {
@@ -34,12 +32,12 @@ public class flight {
         this.destination = destination;
     }
 
-    public String getDate() {
-        return date;
+    public String getFlightId() {
+        return flightId;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setFlightId(String flightId) {
+        this.flightId = flightId;
     }
 
     public String getLaunchTime() {

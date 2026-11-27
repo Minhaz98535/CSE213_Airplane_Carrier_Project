@@ -1,4 +1,4 @@
-package User;
+package NonUser;
 
 public class FlightReport {
     private String reportId;
@@ -6,30 +6,11 @@ public class FlightReport {
     private String arrivalTime;
     private String observations;
 
-    public FlightReport() {
-    }
-
-    public FlightReport(String reportId, String departureTime, String arrivalTime, String observations) {
-        this.reportId = reportId;
-        this.departureTime = departureTime;
+    public FlightReport(String arrivalTime, String departureTime, String observations, String reportId) {
         this.arrivalTime = arrivalTime;
-        this.observations = observations;
-    }
-
-    public String getReportId() {
-        return reportId;
-    }
-
-    public void setReportId(String reportId) {
-        this.reportId = reportId;
-    }
-
-    public String getDepartureTime() {
-        return departureTime;
-    }
-
-    public void setDepartureTime(String departureTime) {
         this.departureTime = departureTime;
+        this.observations = observations;
+        this.reportId = reportId;
     }
 
     public String getArrivalTime() {
@@ -40,11 +21,27 @@ public class FlightReport {
         this.arrivalTime = arrivalTime;
     }
 
+    public String getDepartureTime() {
+        return departureTime;
+    }
+
+    public void setDepartureTime(String departureTime) {
+        this.departureTime = departureTime;
+    }
+
     public String getObservations() {
         return observations;
     }
 
     public void setObservations(String observations) {
         this.observations = observations;
+    }
+
+    public String getReportId() {
+        return reportId;
+    }
+
+    public void setReportId(String reportId) {
+        this.reportId = reportId;
     }
 }
