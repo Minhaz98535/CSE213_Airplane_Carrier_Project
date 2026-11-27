@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="CONTROLLER_NAME"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/27.0.1.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sohan.MaintenanceScheduleController">
+   <children>
+      <Text layoutX="8.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Maintenance Schedule" wrappingWidth="142.21630859375" />
+      <ComboBox fx:id="aircraftidComboBox" layoutX="14.0" layoutY="57.0" prefHeight="26.0" prefWidth="225.0" promptText="Aircraft ID" />
+      <ComboBox layoutX="315.0" layoutY="58.0" prefHeight="26.0" prefWidth="218.0" promptText="Maintance Type" />
+      <ComboBox fx:id="statusComboBox" layoutX="4.0" layoutY="318.0" prefHeight="26.0" prefWidth="343.0" />
+      <Button layoutX="369.0" layoutY="319.0" mnemonicParsing="false" onAction="#savescheduleButton" prefHeight="26.0" prefWidth="225.0" text="SAVE SCHEDULE" />
+      <DatePicker fx:id="selectdatepicker" layoutX="14.0" layoutY="115.0" prefHeight="26.0" prefWidth="225.0" promptText="select date" />
+      <TextField fx:id="Timetextfield" layoutX="309.0" layoutY="116.0" prefHeight="26.0" prefWidth="225.0" promptText="time" />
+      <TextArea fx:id="maintanceRemarksTextArea" layoutX="13.0" layoutY="223.0" prefHeight="62.0" prefWidth="574.0" />
+      <Text layoutX="21.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="maintance Details" />
+   </children>
 </AnchorPane>

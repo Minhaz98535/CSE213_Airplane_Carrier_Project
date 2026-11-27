@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/27.0.1.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/27.0.1.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sohan.WeatherController">
    <children>
       <DatePicker fx:id="datepickerdate" layoutX="336.0" layoutY="56.0" prefHeight="26.0" prefWidth="248.0" />
       <ComboBox fx:id="loactionfxid" layoutX="14.0" layoutY="57.0" prefHeight="26.0" prefWidth="283.0" />
