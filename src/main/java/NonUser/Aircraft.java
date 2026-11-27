@@ -1,6 +1,8 @@
 package NonUser;
 
-public class Aircraft {
+import java.io.Serializable;
+
+public class Aircraft implements Serializable {
     protected int aircraftId;
     protected String aircraftName, aircraftType, aircraftStatus;
 

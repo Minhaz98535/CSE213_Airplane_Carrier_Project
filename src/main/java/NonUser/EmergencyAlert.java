@@ -1,8 +1,9 @@
 package NonUser;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class EmergencyAlert {
+public class EmergencyAlert implements Serializable {
     protected int alertId;
     protected String alertType, alertSeverity, alertDescription, actionTakenRequest;
     protected LocalDate alertDate;
