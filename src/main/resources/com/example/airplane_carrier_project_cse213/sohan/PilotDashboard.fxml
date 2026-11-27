@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/27.0.1.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/27.0.1.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sohan.PilotDeshboardController">
    <children>
       <Label fx:id="pilotdeshboardlebel" layoutX="24.0" layoutY="6.0" text="Pilot Deshboard" />
       <Label fx:id="pilotnamefxid" layoutX="432.0" layoutY="15.0" prefHeight="17.0" prefWidth="90.0" text="Label" />

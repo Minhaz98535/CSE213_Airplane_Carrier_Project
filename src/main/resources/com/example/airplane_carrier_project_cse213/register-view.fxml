@@ -22,7 +22,7 @@
             <Font name="System Bold Italic" size="14.0" />
          </font>
       </Button>
-      <Text layoutX="230.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aircraft Carrier Portal" wrappingWidth="527.48974609375">
+      <Text layoutX="235.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aircraft Carrier Portal" wrappingWidth="602.689697265625">
          <font>
             <Font size="59.0" />
          </font>
