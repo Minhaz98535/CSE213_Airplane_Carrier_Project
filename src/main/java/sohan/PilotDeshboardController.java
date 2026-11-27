@@ -1,41 +1,57 @@
 package sohan;
 
-public class PilotDeshboardController
-{
-    @javafx.fxml.FXML
+import javafx.fxml.FXML;
+import javafx.event.ActionEvent;
+import javafx.scene.control.Label;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.StackPane;
+
+public class PilotDeshboardController {
+
+    @FXML
     private Label pilotnamefxid;
-    @javafx.fxml.FXML
+
+    @FXML
     private StackPane Fxmlgoalload;
-    @javafx.fxml.FXML
+
+    @FXML
     private BorderPane pilotdeshboardborder;
-    @javafx.fxml.FXML
+
+    @FXML
     private Label pilotdeshboardlebel;
 
-    @javafx.fxml.FXML
+    @FXML
     public void initialize() {
+        pilotdeshboardlebel.setText("Pilot Dashboard");
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void weatherinfobutton(ActionEvent actionEvent) {
+        System.out.println("Weather Information clicked");
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void myaircraftbutton(ActionEvent actionEvent) {
+        System.out.println("My Aircraft clicked");
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void reportissuebutton(ActionEvent actionEvent) {
+        System.out.println("Report Issue clicked");
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void logoutButton(ActionEvent actionEvent) {
+        System.out.println("Logout clicked");
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void submitreportbutton(ActionEvent actionEvent) {
+        System.out.println("Submit Report clicked");
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void flightScheduleButton(ActionEvent actionEvent) {
+        System.out.println("Flight Schedule clicked");
     }
 }

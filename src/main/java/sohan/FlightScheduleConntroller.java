@@ -1,29 +1,55 @@
 package sohan;
 
-public class FlightScheduleConntroller
-{
-    @javafx.fxml.FXML
-    private TableColumn date;
-    @javafx.fxml.FXML
-    private TableColumn launchtime;
-    @javafx.fxml.FXML
-    private TableColumn flightno;
-    @javafx.fxml.FXML
-    private Label flightschedule;
-    @javafx.fxml.FXML
-    private Label noflightmassage;
-    @javafx.fxml.FXML
-    private TableColumn destination;
-    @javafx.fxml.FXML
-    private DatePicker flightscheduledate;
-    @javafx.fxml.FXML
-    private TableColumn status;
+import javafx.fxml.FXML;
+import javafx.event.ActionEvent;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
 
-    @javafx.fxml.FXML
+public class FlightScheduleConntroller {
+
+    @FXML
+    private TableColumn<?, ?> date;
+
+    @FXML
+    private TableColumn<?, ?> launchtime;
+
+    @FXML
+    private TableColumn<?, ?> flightno;
+
+    @FXML
+    private Label flightschedule;
+
+    @FXML
+    private Label noflightmassage;
+
+    @FXML
+    private TableColumn<?, ?> destination;
+
+    @FXML
+    private DatePicker flightscheduledate;
+
+    @FXML
+    private TableColumn<?, ?> status;
+
+    @FXML
     public void initialize() {
+        noflightmassage.setVisible(false);
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void showflightscheduleOnaction(ActionEvent actionEvent) {
+
+        if (flightscheduledate.getValue() == null) {
+            noflightmassage.setText("Please select a flight date.");
+            noflightmassage.setVisible(true);
+            return;
+        }
+
+        String selectedDate = flightscheduledate.getValue().toString();
+
+        System.out.println("Selected Flight Date: " + selectedDate);
+
+        // Ekhane selected date onujayi TableView update korbe.
     }
 }

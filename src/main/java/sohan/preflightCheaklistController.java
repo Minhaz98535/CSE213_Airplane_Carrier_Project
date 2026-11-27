@@ -1,25 +1,61 @@
 package sohan;
 
-public class preflightCheaklistController
-{
-    @javafx.fxml.FXML
+import javafx.fxml.FXML;
+import javafx.event.ActionEvent;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.Label;
+
+public class preflightCheaklistController {
+
+    @FXML
     private CheckBox fuellevelcheakedBox;
-    @javafx.fxml.FXML
+
+    @FXML
     private CheckBox enginecheakedcheakbox;
-    @javafx.fxml.FXML
+
+    @FXML
     private CheckBox communicationsystemcheaked;
-    @javafx.fxml.FXML
+
+    @FXML
     private Label preflightCheakedlistfxid;
 
-    @javafx.fxml.FXML
+    @FXML
     public void initialize() {
+        preflightCheakedlistfxid.setText("Pre-Flight Checklist");
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void cancelbutton(ActionEvent actionEvent) {
+
+        fuellevelcheakedBox.setSelected(false);
+        enginecheakedcheakbox.setSelected(false);
+        communicationsystemcheaked.setSelected(false);
+
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void submitbutton(ActionEvent actionEvent) {
+
+        boolean fuelChecked = fuellevelcheakedBox.isSelected();
+        boolean engineChecked = enginecheakedcheakbox.isSelected();
+        boolean communicationChecked =
+                communicationsystemcheaked.isSelected();
+
+        if (!fuelChecked || !engineChecked || !communicationChecked) {
+
+            preflightCheakedlistfxid.setText(
+                    "Please complete all checklist items!"
+            );
+
+            return;
+        }
+
+        preflightCheakedlistfxid.setText(
+                "Pre-flight checklist completed!"
+        );
+
+        System.out.println("Fuel Level: Checked");
+        System.out.println("Engine: Checked");
+        System.out.println("Communication System: Checked");
     }
 }
