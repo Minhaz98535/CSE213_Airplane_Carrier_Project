@@ -31,7 +31,7 @@
             <Font name="Times New Roman Bold" size="25.0" />
          </font>
       </Text>
-      <Button layoutX="17.0" layoutY="534.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="103.0" style="-fx-background-color: pink;" text="Back">
+      <Button layoutX="17.0" layoutY="534.0" mnemonicParsing="false" onAction="#backToDashboardBTN" prefHeight="38.0" prefWidth="103.0" style="-fx-background-color: pink;" text="Back">
          <font>
             <Font name="System Bold" size="26.0" />
          </font>
@@ -46,32 +46,32 @@
             <Font size="15.0" />
          </font>
       </Text>
-      <TextField layoutX="155.0" layoutY="140.0" prefHeight="34.0" prefWidth="192.0" />
+      <TextField fx:id="inputMissionNameTF" layoutX="155.0" layoutY="140.0" prefHeight="34.0" prefWidth="192.0" />
       <Text layoutX="45.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Planned Date :">
          <font>
             <Font size="15.0" />
          </font>
       </Text>
-      <DatePicker layoutX="157.0" layoutY="195.0" />
+      <DatePicker fx:id="inputMissionDateDP" layoutX="157.0" layoutY="195.0" />
       <Text layoutX="44.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mission Type : ">
          <font>
             <Font size="15.0" />
          </font>
       </Text>
-      <ComboBox layoutX="159.0" layoutY="241.0" prefHeight="26.0" prefWidth="182.0" />
+      <ComboBox fx:id="inputMissionTypeCB" layoutX="159.0" layoutY="241.0" prefHeight="26.0" prefWidth="182.0" />
       <Text layoutX="411.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Target :">
          <font>
             <Font size="15.0" />
          </font>
       </Text>
-      <TextField layoutX="489.0" layoutY="140.0" prefHeight="34.0" prefWidth="192.0" />
+      <TextField fx:id="inputMissionTargetTF" layoutX="489.0" layoutY="140.0" prefHeight="34.0" prefWidth="192.0" />
       <Text layoutX="405.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description :">
          <font>
             <Font size="15.0" />
          </font>
       </Text>
-      <TextArea layoutX="489.0" layoutY="187.0" prefHeight="82.0" prefWidth="214.0" />
-      <Button layoutX="769.0" layoutY="172.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="201.0" text="Assign Mission">
+      <TextArea fx:id="inputMissionDescriptionTA" layoutX="489.0" layoutY="187.0" prefHeight="82.0" prefWidth="214.0" />
+      <Button layoutX="769.0" layoutY="172.0" mnemonicParsing="false" onAction="#assignMissionBTN" prefHeight="59.0" prefWidth="201.0" text="Assign Mission">
          <font>
             <Font size="16.0" />
          </font>
@@ -81,14 +81,14 @@
             <Font name="System Bold Italic" size="17.0" />
          </font>
       </Text>
-      <TableView layoutX="17.0" layoutY="322.0" prefHeight="189.0" prefWidth="631.0">
+      <TableView fx:id="MissionTableVIew" layoutX="17.0" layoutY="322.0" prefHeight="189.0" prefWidth="631.0">
         <columns>
-          <TableColumn prefWidth="82.72420692443848" text="Mission ID" />
-          <TableColumn prefWidth="119.27577209472656" text="Mission Name" />
-            <TableColumn prefWidth="99.76185607910156" text="Mission Type" />
-            <TableColumn prefWidth="109.03759765625" text="MIssion Target" />
-            <TableColumn prefWidth="119.16854858398438" text="Planned Date" />
-            <TableColumn prefWidth="99.15460205078125" text="Status" />
+          <TableColumn fx:id="missionIdCol" prefWidth="82.72420692443848" text="Mission ID" />
+          <TableColumn fx:id="missionNameCol" prefWidth="119.27577209472656" text="Mission Name" />
+            <TableColumn fx:id="missionTypeCol" prefWidth="99.76185607910156" text="Mission Type" />
+            <TableColumn fx:id="missionTargetCol" prefWidth="109.03759765625" text="MIssion Target" />
+            <TableColumn fx:id="missionDateCol" prefWidth="119.16854858398438" text="Planned Date" />
+            <TableColumn fx:id="missionStatusCol" prefWidth="99.15460205078125" text="Status" />
         </columns>
       </TableView>
       <Text layoutX="683.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mission Type : ">
@@ -101,15 +101,15 @@
             <Font size="15.0" />
          </font>
       </Text>
-      <DatePicker layoutX="795.0" layoutY="403.0" />
+      <DatePicker fx:id="filterMissionDateBEforeDP" layoutX="795.0" layoutY="403.0" />
       <Text layoutX="683.0" layoutY="467.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mission Status: ">
          <font>
             <Font size="15.0" />
          </font>
       </Text>
-      <ComboBox layoutX="797.0" layoutY="449.0" prefHeight="26.0" prefWidth="182.0" />
-      <ComboBox layoutX="797.0" layoutY="354.0" prefHeight="26.0" prefWidth="182.0" />
-      <Button layoutX="775.0" layoutY="504.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="176.0" text="Filter Mission Table">
+      <ComboBox fx:id="filterMissionStatusCB" layoutX="797.0" layoutY="449.0" prefHeight="26.0" prefWidth="182.0" />
+      <ComboBox fx:id="filterMissionTypeCB" layoutX="797.0" layoutY="354.0" prefHeight="26.0" prefWidth="182.0" />
+      <Button layoutX="775.0" layoutY="504.0" mnemonicParsing="false" onAction="#filterMIssionTableBTN" prefHeight="48.0" prefWidth="176.0" text="Filter Mission Table">
          <font>
             <Font size="16.0" />
          </font>

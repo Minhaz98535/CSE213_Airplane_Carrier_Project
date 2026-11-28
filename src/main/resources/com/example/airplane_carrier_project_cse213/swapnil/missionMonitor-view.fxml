@@ -10,7 +10,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="swapnil.MissionMonitorViewController">
    <children>
       <Line endX="906.7269287109375" endY="-7.62939453125E-6" layoutX="122.0" layoutY="74.0" startX="-126.75154876708984" startY="-7.62939453125E-6" />
@@ -29,7 +28,7 @@
             <Font name="Times New Roman Bold" size="25.0" />
          </font>
       </Text>
-      <Button layoutX="21.0" layoutY="528.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="103.0" style="-fx-background-color: pink;" text="Back">
+      <Button layoutX="21.0" layoutY="528.0" mnemonicParsing="false" onAction="#backToDashboardBTN" prefHeight="38.0" prefWidth="103.0" style="-fx-background-color: pink;" text="Back">
          <font>
             <Font name="System Bold" size="26.0" />
          </font>
@@ -39,13 +38,13 @@
             <Font name="System Bold Italic" size="17.0" />
          </font>
       </Text>
-      <TableView layoutX="62.0" layoutY="148.0" prefHeight="197.0" prefWidth="894.0">
+      <TableView fx:id="MissionTbaleView" layoutX="62.0" layoutY="148.0" prefHeight="197.0" prefWidth="894.0">
          <columns>
-            <TableColumn prefWidth="116.38148498535156" text="Mission ID" />
-            <TableColumn prefWidth="198.97686767578125" text="Mission Name" />
-            <TableColumn prefWidth="182.52313232421875" text="Flight ID" />
-            <TableColumn prefWidth="205.88723754882812" text="Date" />
-            <TableColumn prefWidth="191.35821533203125" text="Status" />
+            <TableColumn fx:id="missionIdCol" prefWidth="116.38148498535156" text="Mission ID" />
+            <TableColumn fx:id="missionNameCol" prefWidth="198.97686767578125" text="Mission Name" />
+            <TableColumn fx:id="FlightIdCol" prefWidth="182.52313232421875" text="Flight ID" />
+            <TableColumn fx:id="missionDateCol" prefWidth="205.88723754882812" text="Date" />
+            <TableColumn fx:id="missionStatusCol" prefWidth="191.35821533203125" text="Status" />
          </columns>
       </TableView>
       <Text layoutX="281.0" layoutY="467.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Status :">
@@ -53,8 +52,8 @@
             <Font size="15.0" />
          </font>
       </Text>
-      <ComboBox layoutX="401.0" layoutY="445.0" prefHeight="36.0" prefWidth="185.0" />
-      <Button layoutX="659.0" layoutY="440.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="105.0" text="Filter">
+      <ComboBox fx:id="selectMissionStatusCB" layoutX="401.0" layoutY="445.0" prefHeight="36.0" prefWidth="185.0" />
+      <Button layoutX="659.0" layoutY="440.0" mnemonicParsing="false" onAction="#filterMissionByMissionStatusBTN" prefHeight="46.0" prefWidth="105.0" text="Filter">
          <font>
             <Font size="16.0" />
          </font>

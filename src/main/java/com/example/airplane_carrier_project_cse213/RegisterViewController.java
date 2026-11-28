@@ -27,7 +27,7 @@ public class RegisterViewController
 
     @javafx.fxml.FXML
     public void initialize() {
-        roleCB.getItems().addAll("Aircraft Carrier Captain", "Air Operation Officer", "Pilot");
+        roleCB.getItems().addAll("Aircraft Carrier Captain", "Air Operation Officer", "Pilot", "Aircraft Maintenance Engineer", "Flight Deck officer", "Maintenance Logistics Officer", "Carrier navigation officer", "Medical Officer");
         genderCB.getItems().addAll("Male", "Female");
     }
 

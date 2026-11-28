@@ -11,7 +11,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="swapnil.flightScheduleApprovalViewController">
    <children>
       <Line endX="906.7269287109375" endY="-7.62939453125E-6" layoutX="123.0" layoutY="69.0" startX="-126.75154876708984" startY="-7.62939453125E-6" />
@@ -30,7 +29,7 @@
             <Font name="Times New Roman Bold" size="25.0" />
          </font>
       </Text>
-      <Button layoutX="18.0" layoutY="530.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="103.0" style="-fx-background-color: pink;" text="Back">
+      <Button layoutX="18.0" layoutY="530.0" mnemonicParsing="false" onAction="#backToDashboardBTN" prefHeight="38.0" prefWidth="103.0" style="-fx-background-color: pink;" text="Back">
          <font>
             <Font name="System Bold" size="26.0" />
          </font>
@@ -40,23 +39,23 @@
             <Font name="System Bold Italic" size="17.0" />
          </font>
       </Text>
-      <Button layoutX="617.0" layoutY="494.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="140.0" text="Approve">
+      <Button layoutX="617.0" layoutY="494.0" mnemonicParsing="false" onAction="#actionApproveBTN" prefHeight="44.0" prefWidth="140.0" text="Approve">
          <font>
             <Font size="19.0" />
          </font>
       </Button>
-      <TableView layoutX="133.0" layoutY="164.0" prefHeight="200.0" prefWidth="736.0">
+      <TableView fx:id="FlightScheduleTableView" layoutX="133.0" layoutY="164.0" prefHeight="200.0" prefWidth="736.0">
         <columns>
-          <TableColumn prefWidth="86.53750610351562" text="Flight ID" />
-            <TableColumn prefWidth="146.94728088378906" text="Flight Date" />
-            <TableColumn prefWidth="163.05276489257812" text="Flight Time" />
-            <TableColumn prefWidth="187.03048706054688" text="Mission" />
-            <TableColumn prefWidth="151.699951171875" text="Is Approved" />
+          <TableColumn fx:id="flightIdCol" prefWidth="86.53750610351562" text="Flight ID" />
+            <TableColumn fx:id="flightDateCol" prefWidth="146.94728088378906" text="Flight Date" />
+            <TableColumn fx:id="flightTimeCol" prefWidth="163.05276489257812" text="Flight Time" />
+            <TableColumn fx:id="missionNameCol" prefWidth="187.03048706054688" text="Mission" />
+            <TableColumn fx:id="isApprovedCol" prefWidth="151.699951171875" text="Is Approved" />
         </columns>
       </TableView>
       <Text layoutX="639.0" layoutY="437.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Flight ID :" />
-      <ComboBox layoutX="750.0" layoutY="416.0" prefHeight="34.0" prefWidth="157.0" />
-      <Button layoutX="809.0" layoutY="492.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="140.0" text="Reject">
+      <ComboBox fx:id="selectFlightIdCB" layoutX="750.0" layoutY="416.0" prefHeight="34.0" prefWidth="157.0" />
+      <Button layoutX="809.0" layoutY="492.0" mnemonicParsing="false" onAction="#actionRejectBTN" prefHeight="44.0" prefWidth="140.0" text="Reject">
          <font>
             <Font size="19.0" />
          </font>
@@ -66,12 +65,12 @@
             <Font size="16.0" />
          </font>
       </Text>
-      <CheckBox layoutX="240.0" layoutY="446.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="154.0" text="Approved?">
+      <CheckBox fx:id="isApprovedCHK" layoutX="240.0" layoutY="446.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="154.0" text="pending">
          <font>
             <Font size="23.0" />
          </font>
       </CheckBox>
-      <Button layoutX="258.0" layoutY="515.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="109.0" text="Filter">
+      <Button layoutX="258.0" layoutY="515.0" mnemonicParsing="false" onAction="#flterFlightScheduleByApprovedCheckBoxBTN" prefHeight="37.0" prefWidth="109.0" text="Filter">
          <font>
             <Font size="19.0" />
          </font>

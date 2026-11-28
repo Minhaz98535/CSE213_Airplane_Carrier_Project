@@ -30,18 +30,18 @@
             <Font name="Times New Roman Bold" size="25.0" />
          </font>
       </Text>
-      <Button layoutX="20.0" layoutY="530.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="103.0" style="-fx-background-color: pink;" text="Back">
+      <Button layoutX="20.0" layoutY="530.0" mnemonicParsing="false" onAction="#backToDashboardBTN" prefHeight="38.0" prefWidth="103.0" style="-fx-background-color: pink;" text="Back">
          <font>
             <Font name="System Bold" size="26.0" />
          </font>
       </Button>
-      <TableView layoutX="39.0" layoutY="190.0" prefHeight="223.0" prefWidth="533.0">
+      <TableView fx:id="EmergencyAlertTableView" layoutX="39.0" layoutY="190.0" prefHeight="223.0" prefWidth="533.0">
          <columns>
-            <TableColumn prefWidth="86.72639465332031" text="Alert ID" />
-            <TableColumn prefWidth="121.22137451171875" text="Alert Type" />
-            <TableColumn prefWidth="108.54727172851562" text="Severity" />
-            <TableColumn prefWidth="97.02212524414062" text="Date" />
-            <TableColumn prefWidth="118.47787475585938" text="IS Approved" />
+            <TableColumn fx:id="alertIdCol" prefWidth="86.72639465332031" text="Alert ID" />
+            <TableColumn fx:id="alertTypeCol" prefWidth="121.22137451171875" text="Alert Type" />
+            <TableColumn fx:id="alertSeverityCol" prefWidth="108.54727172851562" text="Severity" />
+            <TableColumn fx:id="alertDateCol" prefWidth="97.02212524414062" text="Date" />
+            <TableColumn fx:id="actionApprovedCol" prefWidth="118.47787475585938" text="IS Approved" />
          </columns>
       </TableView>
       <Text layoutX="36.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alert Details">
@@ -55,21 +55,26 @@
          </font>
       </Text>
       <Text layoutX="606.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Alert ID :" />
-      <ComboBox layoutX="715.0" layoutY="192.0" prefHeight="26.0" prefWidth="169.0" />
+      <ComboBox fx:id="selectAlertIdCB" layoutX="715.0" layoutY="192.0" prefHeight="26.0" prefWidth="169.0" />
       <Text layoutX="623.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description :" />
-      <TextArea layoutX="712.0" layoutY="237.0" prefHeight="78.0" prefWidth="287.0" />
+      <TextArea fx:id="showAlertDescriptionTA" layoutX="712.0" layoutY="237.0" prefHeight="78.0" prefWidth="287.0" />
       <Text layoutX="599.0" layoutY="357.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Requested Action :" />
-      <TextField layoutX="721.0" layoutY="338.0" prefHeight="31.0" prefWidth="277.0">
+      <TextField fx:id="showRequestActionTF" layoutX="721.0" layoutY="338.0" prefHeight="31.0" prefWidth="277.0">
          <font>
             <Font size="14.0" />
          </font>
       </TextField>
-      <Button layoutX="631.0" layoutY="424.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="117.0" text="Approve">
+      <Button layoutX="631.0" layoutY="424.0" mnemonicParsing="false" onAction="#actionApprovedBTN" prefHeight="44.0" prefWidth="117.0" text="Approve">
          <font>
             <Font size="19.0" />
          </font>
       </Button>
-      <Button layoutX="822.0" layoutY="422.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="117.0" text="Reject">
+      <Button layoutX="822.0" layoutY="422.0" mnemonicParsing="false" onAction="#actionRejectBTN" prefHeight="44.0" prefWidth="117.0" text="Reject">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Button layoutX="934.0" layoutY="185.0" mnemonicParsing="false" onAction="#getDetailsByAlertIdBTN" prefHeight="22.0" prefWidth="63.0" text="Get">
          <font>
             <Font size="19.0" />
          </font>
