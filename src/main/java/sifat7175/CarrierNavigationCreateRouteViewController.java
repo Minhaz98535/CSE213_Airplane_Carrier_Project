@@ -1,45 +1,81 @@
 package sifat7175;
 
+import NonUser.gps;
+import com.example.airplane_carrier_project_cse213.Helper;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.Label;
-import javafx.scene.layout.AnchorPane;
+import javafx.scene.control.TextField;
 
-public class CarrierNavigationCreateRouteViewController
-{
-    @javafx.fxml.FXML
+import java.io.IOException;
+
+public class CarrierNavigationCreateRouteViewController {
+
+    @FXML
     private Label windlabel;
-    @javafx.fxml.FXML
+    @FXML
     private Label speedlabel;
-    @javafx.fxml.FXML
+    @FXML
     private Label avoidinglandslabel;
-    @javafx.fxml.FXML
+    @FXML
     private Label restrictedarealabel;
-    @javafx.fxml.FXML
+    @FXML
     private Label waypointlabel;
-    @javafx.fxml.FXML
-    private AnchorPane currentpositionlabel;
-    @javafx.fxml.FXML
+    @FXML
     private Label statuslabel;
-    @javafx.fxml.FXML
+    @FXML
     private Label distancelabel;
+    @FXML
+    private TextField enterdestinationTF;
+    @FXML
+    private Label currentpositionlabel;
 
-    @javafx.fxml.FXML
+    private gps myGps = new gps();
+
+    @FXML
     public void initialize() {
+        currentpositionlabel.setText(myGps.getFormattedPosition());
+        speedlabel.setText(myGps.getSpeed() + " Knots");
+        statuslabel.setText("Ready");
     }
 
-    @javafx.fxml.FXML
-    public void backOnActionButton(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void createrouteOnaction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
+    @FXML
     public void refreshonaction(ActionEvent actionEvent) {
+        myGps.updateLivePosition();
+        currentpositionlabel.setText(myGps.getFormattedPosition());
+        speedlabel.setText(myGps.getSpeed() + " Knots");
+        statuslabel.setText("Updated");
     }
 
-    @javafx.fxml.FXML
+    @FXML
+    public void createrouteOnaction(ActionEvent actionEvent) {
+        String destination = enterdestinationTF.getText();
+        if (destination.isEmpty()) {
+            statuslabel.setText("Enter Destination!");
+            return;
+        }
+
+        String[] parts = gps.calculateDummyRoute(destination).split("\\|");
+        distancelabel.setText(parts[0]);
+        waypointlabel.setText(parts[1]);
+        windlabel.setText(parts[2]);
+
+        statuslabel.setText("Route Set to " + destination);
+        restrictedarealabel.setText("Restricted Area: Clear");
+        avoidinglandslabel.setText("Avoiding Lands: Safe");
+    }
+
+    @FXML
     public void confirmonactionbutton(ActionEvent actionEvent) {
+        if (distancelabel.getText().equals("0 km")) {
+            statuslabel.setText("Create Route First!");
+            return;
+        }
+        statuslabel.setText("Route Confirmed!");
+    }
+
+    @FXML
+    public void backOnActionButton(ActionEvent actionEvent) throws IOException {
+        Helper.sceneSwitcher(actionEvent, "/com/example/airplane_carrier_project_cse213/sifat7175/carrierNavigationDashboard.fxml");
     }
 }
