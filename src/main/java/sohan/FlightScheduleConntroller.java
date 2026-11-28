@@ -5,7 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
-
+import NonUser.FlightSchedule;
 public class FlightScheduleConntroller {
 
     @FXML
