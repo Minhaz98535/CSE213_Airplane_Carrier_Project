@@ -11,7 +11,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="swapnil.CreateFlightScheduleViewController">
    <children>
       <Line endX="906.7269287109375" endY="-7.62939453125E-6" layoutX="120.0" layoutY="71.0" startX="-126.75154876708984" startY="-7.62939453125E-6" />
@@ -30,7 +29,7 @@
             <Font name="Times New Roman Bold" size="25.0" />
          </font>
       </Text>
-      <Button layoutX="15.0" layoutY="532.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="103.0" style="-fx-background-color: pink;" text="Back">
+      <Button layoutX="15.0" layoutY="532.0" mnemonicParsing="false" onAction="#backToDashboardBTN" prefHeight="38.0" prefWidth="103.0" style="-fx-background-color: pink;" text="Back">
          <font>
             <Font name="System Bold" size="26.0" />
          </font>
@@ -50,30 +49,30 @@
             <Font size="15.0" />
          </font>
       </Text>
-      <DatePicker layoutX="185.0" layoutY="237.0" />
+      <DatePicker fx:id="flightDateDP" layoutX="185.0" layoutY="237.0" />
       <Text layoutX="72.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Launch Time :">
          <font>
             <Font size="15.0" />
          </font>
       </Text>
-      <Button layoutX="325.0" layoutY="385.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="201.0" text="Create Schedule">
+      <Button layoutX="325.0" layoutY="385.0" mnemonicParsing="false" onAction="#createFlightScheduleBTN" prefHeight="59.0" prefWidth="201.0" text="Create Schedule">
          <font>
             <Font size="16.0" />
          </font>
       </Button>
-      <ComboBox layoutX="185.0" layoutY="181.0" prefHeight="26.0" prefWidth="182.0" />
-      <TextField layoutX="185.0" layoutY="291.0" prefHeight="29.0" prefWidth="189.0" />
+      <ComboBox fx:id="selectMissionIdCB" layoutX="185.0" layoutY="181.0" prefHeight="26.0" prefWidth="182.0" />
+      <TextField fx:id="launchTImeTF" layoutX="185.0" layoutY="291.0" prefHeight="29.0" prefWidth="189.0" promptText="02:30" />
       <Text layoutX="592.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Weather Condition :">
          <font>
             <Font size="15.0" />
          </font>
       </Text>
-      <Label layoutX="735.0" layoutY="126.0" prefHeight="57.0" prefWidth="224.0" text="no data">
+      <Label fx:id="showWeatherConditionLabel" layoutX="735.0" layoutY="126.0" prefHeight="57.0" prefWidth="224.0" text="no data">
          <font>
             <Font size="26.0" />
          </font>
       </Label>
-      <Button layoutX="409.0" layoutY="218.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="142.0" text="Check weather">
+      <Button layoutX="409.0" layoutY="218.0" mnemonicParsing="false" onAction="#checkWeatherBTN" prefHeight="41.0" prefWidth="142.0" text="Check weather">
          <font>
             <Font size="16.0" />
          </font>
@@ -83,8 +82,8 @@
             <Font size="15.0" />
          </font>
       </Text>
-      <TextArea layoutX="733.0" layoutY="222.0" prefHeight="147.0" prefWidth="273.0" />
-      <Button layoutX="830.0" layoutY="417.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="85.0" text="Clear">
+      <TextArea fx:id="showOperationalRemarksTA" layoutX="733.0" layoutY="222.0" prefHeight="147.0" prefWidth="273.0" />
+      <Button layoutX="830.0" layoutY="417.0" mnemonicParsing="false" onAction="#clearWeatherAndRemarksFieldBTN" prefHeight="37.0" prefWidth="85.0" text="Clear">
          <font>
             <Font size="16.0" />
          </font>

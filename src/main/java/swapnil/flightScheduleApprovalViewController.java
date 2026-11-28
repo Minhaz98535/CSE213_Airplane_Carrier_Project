@@ -19,7 +19,7 @@ import java.util.ArrayList;
 public class flightScheduleApprovalViewController
 {
     @javafx.fxml.FXML
-    private TableColumn <Mission, String> missionNameCol;
+    private TableColumn <FlightSchedule, String> missionNameCol;
     @javafx.fxml.FXML
     private CheckBox isApprovedCHK;
     @javafx.fxml.FXML

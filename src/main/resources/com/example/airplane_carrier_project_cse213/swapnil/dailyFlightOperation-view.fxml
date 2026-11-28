@@ -11,7 +11,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="swapnil.DailuFlightOperationViewController">
    <children>
       <Line endX="906.7269287109375" endY="-7.62939453125E-6" layoutX="118.0" layoutY="72.0" startX="-126.75154876708984" startY="-7.62939453125E-6" />
@@ -30,34 +29,34 @@
             <Font name="Times New Roman Bold" size="25.0" />
          </font>
       </Text>
-      <Button layoutX="20.0" layoutY="531.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="103.0" style="-fx-background-color: pink;" text="Back">
+      <Button layoutX="20.0" layoutY="531.0" mnemonicParsing="false" onAction="#backToDashboardBTN" prefHeight="38.0" prefWidth="103.0" style="-fx-background-color: pink;" text="Back">
          <font>
             <Font name="System Bold" size="26.0" />
          </font>
       </Button>
       <Text layoutX="244.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Date :" wrappingWidth="77.46015312976652" />
-      <DatePicker layoutX="341.0" layoutY="144.0" prefHeight="36.0" prefWidth="191.0" />
-      <Button layoutX="602.0" layoutY="145.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="84.0" text="Search">
+      <DatePicker fx:id="selectDateDP" layoutX="341.0" layoutY="144.0" prefHeight="36.0" prefWidth="191.0" />
+      <Button layoutX="602.0" layoutY="145.0" mnemonicParsing="false" onAction="#searchAndShowDateFilterBTN" prefHeight="36.0" prefWidth="84.0" text="Search">
          <font>
             <Font size="17.0" />
          </font>
       </Button>
-      <TableView layoutX="50.0" layoutY="226.0" prefHeight="205.0" prefWidth="926.0">
+      <TableView fx:id="FlightScheduleTableView" layoutX="50.0" layoutY="226.0" prefHeight="205.0" prefWidth="926.0">
         <columns>
-          <TableColumn prefWidth="132.35145568847656" text="Flight ID" />
-          <TableColumn prefWidth="156.64859008789062" text="Mission" />
-            <TableColumn prefWidth="143.20953369140625" text="Aircraft ID" />
-            <TableColumn prefWidth="117.89404296875" text="Pilot ID" />
-            <TableColumn prefWidth="180.3431396484375" text="Pilot Name" />
-            <TableColumn prefWidth="196.79559326171875" text="Status" />
+          <TableColumn fx:id="flightIdCol" prefWidth="132.35145568847656" text="Flight ID" />
+          <TableColumn fx:id="missionNameCol" prefWidth="156.64859008789062" text="Mission" />
+            <TableColumn fx:id="aircraftIdCol" prefWidth="143.20953369140625" text="Aircraft ID" />
+            <TableColumn fx:id="pilotIdCol" prefWidth="117.89404296875" text="Pilot ID" />
+            <TableColumn fx:id="pilotNameCol" prefWidth="180.3431396484375" text="Pilot Name" />
+            <TableColumn fx:id="flightStatusCol" prefWidth="196.79559326171875" text="Status" />
         </columns>
       </TableView>
       <Text layoutX="245.0" layoutY="495.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filter by status :" wrappingWidth="94.74645378894621" />
-      <Button layoutX="623.0" layoutY="471.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="84.0" text="Filter">
+      <Button layoutX="623.0" layoutY="471.0" mnemonicParsing="false" onAction="#filterFlightScheduleByStatusBTN" prefHeight="36.0" prefWidth="84.0" text="Filter">
          <font>
             <Font size="17.0" />
          </font>
       </Button>
-      <ComboBox layoutX="362.0" layoutY="472.0" prefHeight="36.0" prefWidth="161.0" />
+      <ComboBox fx:id="filterByFlightStatusCB" layoutX="362.0" layoutY="472.0" prefHeight="36.0" prefWidth="161.0" />
    </children>
 </AnchorPane>

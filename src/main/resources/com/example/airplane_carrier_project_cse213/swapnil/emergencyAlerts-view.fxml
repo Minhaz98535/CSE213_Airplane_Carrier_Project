@@ -30,17 +30,17 @@
             <Font name="Times New Roman Bold" size="25.0" />
          </font>
       </Text>
-      <Button layoutX="20.0" layoutY="533.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="103.0" style="-fx-background-color: pink;" text="Back">
+      <Button layoutX="20.0" layoutY="533.0" mnemonicParsing="false" onAction="#backToDashboardBTN" prefHeight="38.0" prefWidth="103.0" style="-fx-background-color: pink;" text="Back">
          <font>
             <Font name="System Bold" size="26.0" />
          </font>
       </Button>
-      <TableView layoutX="43.0" layoutY="180.0" prefHeight="200.0" prefWidth="489.0">
+      <TableView fx:id="IncidentReportTableView" layoutX="43.0" layoutY="180.0" prefHeight="200.0" prefWidth="489.0">
         <columns>
-          <TableColumn prefWidth="86.72639465332031" text="Report ID" />
-          <TableColumn prefWidth="160.77359771728516" text="Emergency Type" />
-            <TableColumn prefWidth="106.67085266113281" text="Severity" />
-            <TableColumn prefWidth="134.50958251953125" text="Status" />
+          <TableColumn fx:id="reportIdCol" prefWidth="86.72639465332031" text="Report ID" />
+          <TableColumn fx:id="emergencyTypeCol" prefWidth="160.77359771728516" text="Emergency Type" />
+            <TableColumn fx:id="damageSeverityCol" prefWidth="106.67085266113281" text="Severity" />
+            <TableColumn fx:id="reportStatusCol" prefWidth="134.50958251953125" text="Status" />
         </columns>
       </TableView>
       <Text layoutX="40.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Report Details">
@@ -54,12 +54,12 @@
          </font>
       </Text>
       <Text layoutX="610.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Report ID :" />
-      <ComboBox layoutX="719.0" layoutY="182.0" prefHeight="26.0" prefWidth="169.0" />
+      <ComboBox fx:id="selectReportIdCB" layoutX="719.0" layoutY="182.0" prefHeight="26.0" prefWidth="169.0" />
       <Text layoutX="627.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description :" />
-      <TextArea layoutX="716.0" layoutY="227.0" prefHeight="78.0" prefWidth="287.0" />
+      <TextArea fx:id="alertDescriptionTA" layoutX="716.0" layoutY="227.0" prefHeight="78.0" prefWidth="287.0" />
       <Text layoutX="600.0" layoutY="347.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Action to be taken :" />
-      <TextField layoutX="716.0" layoutY="328.0" prefHeight="31.0" prefWidth="191.0" />
-      <Button layoutX="737.0" layoutY="423.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="189.0" text="Request for Permission">
+      <TextField fx:id="actionTOTakenRequestTF" layoutX="716.0" layoutY="328.0" prefHeight="31.0" prefWidth="191.0" />
+      <Button layoutX="737.0" layoutY="423.0" mnemonicParsing="false" onAction="#requestForPermissionBTN" prefHeight="67.0" prefWidth="189.0" text="Request for Permission">
          <font>
             <Font size="16.0" />
          </font>

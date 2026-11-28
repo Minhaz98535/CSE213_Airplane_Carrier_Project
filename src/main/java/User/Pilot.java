@@ -1,10 +1,13 @@
 package User;
 
-public class pilot {
+import java.time.LocalDate;
+
+public class Pilot extends User {
     private String licenseNo;
     private String assignedAircraftId;
 
-    public pilot(String licenseNo, String assignedAircraftId) {
+    public Pilot(String fullName, String email, String password, String mobileNo, String gender, String role, LocalDate dateOfBirth, int userId, String licenseNo, String assignedAircraftId) {
+        super(fullName, email, password, mobileNo, gender, role, dateOfBirth, userId);
         this.licenseNo = licenseNo;
         this.assignedAircraftId = assignedAircraftId;
     }

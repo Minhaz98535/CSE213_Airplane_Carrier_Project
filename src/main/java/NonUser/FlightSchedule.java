@@ -4,12 +4,14 @@ import java.io.Serializable;
 import java.time.LocalDate;
 
 public class FlightSchedule implements Serializable {
+    protected final String missionName;
     protected int flightId;
     protected String flightTime, flightStatus;
     protected LocalDate flightDate;
     protected Boolean isApproved, isPending;
 
-    public FlightSchedule(int flightId, String flightTime, String flightStatus, LocalDate flightDate, Boolean isApproved, Boolean isPending) {
+    public FlightSchedule(Mission mission, int flightId, String flightTime, String flightStatus, LocalDate flightDate, Boolean isApproved, Boolean isPending) {
+        this.missionName = mission.getMissionName();
         this.flightId = flightId;
         this.flightTime = flightTime;
         this.flightStatus = flightStatus;
