@@ -37,7 +37,6 @@ public class CarrierNavigationNearByTrackingVesselViewController {
 
     @FXML
     public void initialize() {
-
         vesselnameTC.setCellValueFactory(new PropertyValueFactory<>("vesselName"));
         aisTC.setCellValueFactory(new PropertyValueFactory<>("aisId"));
         rangeTC.setCellValueFactory(new PropertyValueFactory<>("range"));
@@ -53,45 +52,27 @@ public class CarrierNavigationNearByTrackingVesselViewController {
 
         NearbyvewsselTableView.getItems().clear();
         NearbyvewsselTableView.getItems().addAll(vessels);
-
         nearbyvessellable.setText(String.format("%02d", vessels.size()));
 
-        boolean highRiskFound = false;
-        String highRiskVesselName = "";
+        norisklabel.setText("No Risk");
+        emergencyNotificationLabel.setText("All clear.");
 
         for (gps v : vessels) {
             if ("High".equalsIgnoreCase(v.getRiskLevel())) {
-                highRiskFound = true;
-                highRiskVesselName = v.getVesselName();
+                norisklabel.setText("High Risk");
+                emergencyNotificationLabel.setText("ALERT: High-risk vessel (" + v.getVesselName() + ")");
                 break;
             }
         }
-
-        if (highRiskFound) {
-            norisklabel.setText("High Risk");
-            norisklabel.setStyle("-fx-text-fill: red; -fx-font-weight: bold;");
-            if (emergencyNotificationLabel != null) {
-                emergencyNotificationLabel.setText("ALERT: High-risk vessel detected nearby (" + highRiskVesselName + ")!");
-                emergencyNotificationLabel.setStyle("-fx-text-fill: red; -fx-font-weight: bold;");
-            }
-        } else {
-            norisklabel.setText("No Risk");
-            norisklabel.setStyle("-fx-text-fill: green;");
-            if (emergencyNotificationLabel != null) {
-                emergencyNotificationLabel.setText("All clear. No immediate threat.");
-            }
-        }
-    }
-
-    @FXML
-    public void refreshOnActionButton(ActionEvent actionEvent) {
-
-        loadVesselData();
     }
 
     @FXML
     public void backOnActionButton(ActionEvent actionEvent) throws IOException {
-
         Helper.sceneSwitcher(actionEvent, "/com/example/airplane_carrier_project_cse213/sifat7175/carrierNavigationDashboard.fxml");
+    }
+
+    @FXML
+    public void refreshOnActionButton(ActionEvent actionEvent) {
+        loadVesselData();
     }
 }
