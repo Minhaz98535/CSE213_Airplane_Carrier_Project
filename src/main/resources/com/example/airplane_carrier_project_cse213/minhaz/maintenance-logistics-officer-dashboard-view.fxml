@@ -60,7 +60,7 @@
                 <Font name="Arial Bold" size="14.0" />
             </font>
         </Button>
-        <Button alignment="CENTER" layoutX="7.0" layoutY="410.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="242.0" text="Tools Inventory">
+        <Button fx:id="viewToolsInventoryButton" alignment="CENTER" layoutX="7.0" layoutY="410.0" mnemonicParsing="false" onAction="#viewToolsInventoryButtonOnAction" prefHeight="37.0" prefWidth="242.0" text="Tools Inventory">
             <font>
                 <Font name="Arial" size="19.0" />
             </font>
@@ -99,7 +99,7 @@
                   <Font size="24.0" />
               </font>
           </Label>
-      <Button alignment="CENTER" layoutX="8.0" layoutY="460.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="242.0" text="Update Tools">
+      <Button fx:id="updateToolsInventoryButton" alignment="CENTER" layoutX="8.0" layoutY="460.0" mnemonicParsing="false" onAction="#updateToolsInventoryButtonOnAction" prefHeight="37.0" prefWidth="242.0" text="Update Tools">
          <font>
             <Font name="Arial" size="19.0" />
          </font>

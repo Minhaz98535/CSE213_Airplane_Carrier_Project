@@ -27,25 +27,13 @@ public class MaintenanceLogisticsOfficerDashboardViewController
     private Button reportInventorySceneButton;
     @javafx.fxml.FXML
     private Button logAircraftSceneButton;
+    @javafx.fxml.FXML
+    private Button viewToolsInventoryButton;
+    @javafx.fxml.FXML
+    private Button updateToolsInventoryButton;
 
     @javafx.fxml.FXML
     public void initialize() {
-    }
-
-    @Deprecated
-    public void aircraftReadinessSceneButtonOnAction(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void viewFitnessReportButtonOnAction(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void emergencyMsgSceneButtonOnAction(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void navigationSceneButtonOnAction(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
@@ -53,44 +41,43 @@ public class MaintenanceLogisticsOfficerDashboardViewController
         Helper.sceneSwitcher(actionEvent, "login-view.fxml");
     }
 
-    @Deprecated
-    public void inventoryReportsSceneButtonOnAction(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void IncidentReportSceneButton(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void arsenalViewButtonOnAction(ActionEvent actionEvent) {
+    @javafx.fxml.FXML
+    public void sparePartsReportSceneOnAction(ActionEvent actionEvent) throws IOException {
+        Helper.sceneSwitcher(actionEvent,"/com/example/airplane_carrier_project_cse213/minhaz/mlo-create-aircraft-parts-report-view.fxml");
     }
 
     @javafx.fxml.FXML
-    public void sparePartsReportSceneOnAction(ActionEvent actionEvent) {
+    public void addInventorySceneButtonOnAction(ActionEvent actionEvent) throws IOException {
+        Helper.sceneSwitcher(actionEvent,"/com/example/airplane_carrier_project_cse213/minhaz/mlo-add-items-inventory-view.fxml");
     }
 
     @javafx.fxml.FXML
-    public void addInventorySceneButtonOnAction(ActionEvent actionEvent) {
+    public void updateInventorySceneButtonOnAction(ActionEvent actionEvent) throws IOException {
+        Helper.sceneSwitcher(actionEvent,"/com/example/airplane_carrier_project_cse213/minhaz/mlo-update-existing-items-view.fxml");
     }
 
     @javafx.fxml.FXML
-    public void updateInventorySceneButtonOnAction(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void aircraftStatusSceneButtonOnAction(ActionEvent actionEvent) {
+    public void reportInventorySceneButtonOnAction(ActionEvent actionEvent) throws IOException {
+        Helper.sceneSwitcher(actionEvent,"/com/example/airplane_carrier_project_cse213/minhaz/mlo-report-inventory-shortage-view.fxml");
     }
 
     @javafx.fxml.FXML
-    public void reportInventorySceneButtonOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void sparePartsSceneButtonOnAction(ActionEvent actionEvent) {
+    public void sparePartsSceneButtonOnAction(ActionEvent actionEvent) throws IOException {
+        Helper.sceneSwitcher(actionEvent,"/com/example/airplane_carrier_project_cse213/minhaz/mlo-check-aircraft-parts-view.fxml");
     }
 
     @javafx.fxml.FXML
     public void logAircraftSceneButtonOnAction(ActionEvent actionEvent) throws IOException {
         Helper.sceneSwitcher(actionEvent,"/com/example/airplane_carrier_project_cse213/minhaz/mlo-log-aircraft-into-system-view.fxml");
+    }
+
+    @javafx.fxml.FXML
+    public void viewToolsInventoryButtonOnAction(ActionEvent actionEvent) throws IOException {
+        Helper.sceneSwitcher(actionEvent,"/com/example/airplane_carrier_project_cse213/minhaz/mlo-view-maintenance-tools-inventory-view.fxml");
+    }
+
+    @javafx.fxml.FXML
+    public void updateToolsInventoryButtonOnAction(ActionEvent actionEvent) throws IOException {
+        Helper.sceneSwitcher(actionEvent,"/com/example/airplane_carrier_project_cse213/minhaz/mlo-update-tools-inventory-view.fxml");
     }
 }
