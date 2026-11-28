@@ -30,7 +30,7 @@
                     </font>
                 </Label>
             </children></VBox>
-        <Button fx:id="aircraftStatusSceneButton" alignment="CENTER" layoutX="6.0" layoutY="127.0" mnemonicParsing="false" onAction="#aircraftStatusSceneButtonOnAction" prefHeight="37.0" prefWidth="242.0" text="Aircraft Status">
+        <Button fx:id="logAircraftSceneButton" alignment="CENTER" layoutX="6.0" layoutY="127.0" mnemonicParsing="false" onAction="#logAircraftSceneButtonOnAction" prefHeight="37.0" prefWidth="242.0" text="Log Aircraft">
             <font>
                 <Font name="Arial" size="19.0" />
             </font>
@@ -40,7 +40,7 @@
                 <Font name="Arial" size="19.0" />
             </font>
         </Button>
-        <Button fx:id="addInventorySceneButton" alignment="CENTER" layoutX="6.0" layoutY="220.0" mnemonicParsing="false" onAction="#addInventorySceneButtonOnAction" prefHeight="37.0" prefWidth="242.0" text="Inventory Addition">
+        <Button fx:id="addInventorySceneButton" alignment="CENTER" layoutX="6.0" layoutY="220.0" mnemonicParsing="false" onAction="#addInventorySceneButtonOnAction" prefHeight="37.0" prefWidth="242.0" text="Add to Inventory">
             <font>
                 <Font name="Arial" size="19.0" />
             </font>
@@ -60,7 +60,7 @@
                 <Font name="Arial Bold" size="14.0" />
             </font>
         </Button>
-        <Button alignment="CENTER" layoutX="7.0" layoutY="410.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="242.0" text="n/a">
+        <Button alignment="CENTER" layoutX="7.0" layoutY="410.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="242.0" text="Tools Inventory">
             <font>
                 <Font name="Arial" size="19.0" />
             </font>
@@ -84,7 +84,7 @@
                 <Font size="27.0" />
             </font>
         </Label>
-        <Button fx:id="reportInventorySceneButton" alignment="CENTER" layoutX="6.0" layoutY="173.0" mnemonicParsing="false" onAction="#reportInventorySceneButtonOnAction" prefHeight="37.0" prefWidth="242.0" text="Report Inventory">
+        <Button fx:id="reportInventorySceneButton" alignment="CENTER" layoutX="6.0" layoutY="173.0" mnemonicParsing="false" onAction="#reportInventorySceneButtonOnAction" prefHeight="37.0" prefWidth="242.0" text="Report Shortage">
             <font>
                 <Font name="Arial" size="19.0" />
             </font>
@@ -99,7 +99,7 @@
                   <Font size="24.0" />
               </font>
           </Label>
-      <Button alignment="CENTER" layoutX="8.0" layoutY="460.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="242.0" text="n/a">
+      <Button alignment="CENTER" layoutX="8.0" layoutY="460.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="242.0" text="Update Tools">
          <font>
             <Font name="Arial" size="19.0" />
          </font>

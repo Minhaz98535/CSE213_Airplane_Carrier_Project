@@ -37,7 +37,8 @@ public class FlightDeckOfficerDashboardViewController
     }
 
     @javafx.fxml.FXML
-    public void aircraftReadinessSceneButtonOnAction(ActionEvent actionEvent) {
+    public void aircraftReadinessSceneButtonOnAction(ActionEvent actionEvent) throws IOException {
+        Helper.sceneSwitcher(actionEvent, "/com/example/airplane_carrier_project_cse213/minhaz/fdo-approve-aircraft-readiness-view.fxml");
     }
 
     @javafx.fxml.FXML
