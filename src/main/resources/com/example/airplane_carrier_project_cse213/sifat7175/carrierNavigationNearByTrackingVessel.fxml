@@ -27,7 +27,7 @@
                 <Font name="System Bold" size="26.0" />
             </font>
         </Button>
-      <Button layoutX="178.0" layoutY="250.0" mnemonicParsing="false" onAction="#refreshButtonOAC" prefHeight="26.0" prefWidth="734.0" text="Refresh" />
+      <Button layoutX="178.0" layoutY="250.0" mnemonicParsing="false" onAction="#refreshOnActionButton" prefHeight="26.0" prefWidth="734.0" text="Refresh" />
       <Label fx:id="nearbyvessellable" contentDisplay="CENTER" layoutX="137.0" layoutY="165.0" prefHeight="47.0" prefWidth="95.0" text="00" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="32.0" />
@@ -38,7 +38,7 @@
             <Font name="System Bold" size="31.0" />
          </font>
       </Text>
-      <Label layoutX="315.0" layoutY="512.0" prefHeight="32.0" prefWidth="246.0" text="Emergency Notification">
+      <Label fx:id="emergencyNotificationLabel" layoutX="315.0" layoutY="512.0" prefHeight="32.0" prefWidth="246.0" text="Emergency Notification">
          <font>
             <Font size="22.0" />
          </font>
