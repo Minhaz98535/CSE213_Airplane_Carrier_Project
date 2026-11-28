@@ -4,6 +4,7 @@ module com.example.cse213_airplane_carrier_project {
     requires javafx.graphics;
     requires com.example.cse213_airplane_carrier_project;
 
+
     opens NonUser to javafx.base;
     opens User to javafx.base;
     opens swapnil to javafx.fxml;

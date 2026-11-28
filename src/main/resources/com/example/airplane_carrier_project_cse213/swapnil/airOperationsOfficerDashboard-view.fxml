@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="swapnil.AirOperationsOfficerViewController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="swapnil.AirOperationsOfficerDashboardViewController">
     <children>
         <Line endX="906.7269287109375" endY="-7.62939453125E-6" layoutX="125.0" layoutY="63.0" startX="-126.75154876708984" startY="-7.62939453125E-6" />
         <Text layoutX="26.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aircraft Carrier Portal" wrappingWidth="407.9324188232422">
@@ -30,42 +30,42 @@
                 <Font name="Times New Roman Bold" size="25.0" />
             </font>
         </Text>
-        <Button alignment="CENTER" layoutX="7.0" layoutY="78.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="242.0" text="Dashboard">
+        <Button alignment="CENTER" layoutX="7.0" layoutY="78.0" mnemonicParsing="false" onAction="#dashboardPageBTN" prefHeight="37.0" prefWidth="242.0" text="Dashboard">
             <font>
                 <Font name="Arial" size="19.0" />
             </font>
         </Button>
-        <Button alignment="CENTER" layoutX="6.0" layoutY="129.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="242.0" text="Create Flight Schedule">
+        <Button alignment="CENTER" layoutX="6.0" layoutY="129.0" mnemonicParsing="false" onAction="#createFlightSchedulePageBTN" prefHeight="37.0" prefWidth="242.0" text="Create Flight Schedule">
             <font>
                 <Font name="Arial" size="19.0" />
             </font>
         </Button>
-        <Button alignment="CENTER" layoutX="7.0" layoutY="228.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="242.0" text="Assign Pilot">
+        <Button alignment="CENTER" layoutX="7.0" layoutY="228.0" mnemonicParsing="false" onAction="#assignPilotPageBTN" prefHeight="37.0" prefWidth="242.0" text="Assign Pilot">
             <font>
                 <Font name="Arial" size="19.0" />
             </font>
         </Button>
-        <Button alignment="CENTER" layoutX="7.0" layoutY="178.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="242.0" text="Assign Aircraft">
+        <Button alignment="CENTER" layoutX="7.0" layoutY="178.0" mnemonicParsing="false" onAction="#assignAircraftPageBTN" prefHeight="37.0" prefWidth="242.0" text="Assign Aircraft">
             <font>
                 <Font name="Arial" size="19.0" />
             </font>
         </Button>
-        <Button alignment="CENTER" layoutX="7.0" layoutY="278.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="242.0" text="Update Flight Schedule">
+        <Button alignment="CENTER" layoutX="7.0" layoutY="278.0" mnemonicParsing="false" onAction="#updateFlightSchdeulePageBTN" prefHeight="37.0" prefWidth="242.0" text="Update Flight Schedule">
             <font>
                 <Font name="Arial" size="19.0" />
             </font>
         </Button>
-        <Button alignment="CENTER" layoutX="7.0" layoutY="327.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="242.0" text="Monitor Missions">
+        <Button alignment="CENTER" layoutX="7.0" layoutY="327.0" mnemonicParsing="false" onAction="#missionMonitorPageBTN" prefHeight="37.0" prefWidth="242.0" text="Monitor Missions">
             <font>
                 <Font name="Arial" size="19.0" />
             </font>
         </Button>
-        <Button alignment="CENTER" layoutX="83.0" layoutY="541.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="76.0" style="-fx-background-color: red;" text="Log Out" textFill="WHITE">
+        <Button alignment="CENTER" layoutX="83.0" layoutY="541.0" mnemonicParsing="false" onAction="#userLogOutBTN" prefHeight="37.0" prefWidth="76.0" style="-fx-background-color: red;" text="Log Out" textFill="WHITE">
             <font>
                 <Font name="Arial Bold Italic" size="14.0" />
             </font>
         </Button>
-        <Button alignment="CENTER" layoutX="8.0" layoutY="376.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="242.0" text="Flight Status">
+        <Button alignment="CENTER" layoutX="8.0" layoutY="376.0" mnemonicParsing="false" onAction="#updateFlightStatusPageBTN" prefHeight="37.0" prefWidth="242.0" text="Update Flight Status">
             <font>
                 <Font name="Arial" size="19.0" />
             </font>
@@ -77,7 +77,7 @@
                         <Font size="18.0" />
                     </font>
                 </Label>
-                <Label alignment="CENTER" prefHeight="77.0" prefWidth="310.0" text="07">
+                <Label fx:id="showSchedeuleFlightsCntLabel" alignment="CENTER" prefHeight="77.0" prefWidth="310.0" text="07">
                     <font>
                         <Font size="45.0" />
                     </font>
@@ -91,7 +91,7 @@
                         <Font size="18.0" />
                     </font>
                 </Label>
-                <Label alignment="CENTER" prefHeight="77.0" prefWidth="310.0" text="07">
+                <Label fx:id="showReadyAircraftCountLabel" alignment="CENTER" prefHeight="77.0" prefWidth="310.0" text="07">
                     <font>
                         <Font size="45.0" />
                     </font>
@@ -103,21 +103,21 @@
                 <Font size="20.0" />
             </font>
         </Label>
-      <Button alignment="CENTER" layoutX="9.0" layoutY="427.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="242.0" text="Daily Operations">
+      <Button alignment="CENTER" layoutX="9.0" layoutY="427.0" mnemonicParsing="false" onAction="#viewDailyOperationPageBTN" prefHeight="37.0" prefWidth="242.0" text="Daily Operations">
          <font>
             <Font name="Arial" size="19.0" />
          </font>
       </Button>
-      <Button alignment="CENTER" layoutX="9.0" layoutY="477.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="242.0" text="Emergency Alerts">
+      <Button alignment="CENTER" layoutX="9.0" layoutY="477.0" mnemonicParsing="false" onAction="#createEmergencyALertPageBTN" prefHeight="37.0" prefWidth="242.0" text="Emergency Alerts">
          <font>
             <Font name="Arial" size="19.0" />
          </font>
       </Button>
-      <TableView layoutX="278.0" layoutY="356.0" prefHeight="147.0" prefWidth="708.0">
+      <TableView fx:id="FlightSchdeuleTableView" layoutX="278.0" layoutY="356.0" prefHeight="147.0" prefWidth="708.0">
         <columns>
-          <TableColumn prefWidth="170.2760009765625" text="Flight ID" />
-          <TableColumn prefWidth="292.47821044921875" text="Aircraft" />
-            <TableColumn prefWidth="245.02178955078125" text="Status" />
+          <TableColumn fx:id="flightIdCol" prefWidth="170.2760009765625" text="Flight ID" />
+          <TableColumn fx:id="aircraftNameCol" prefWidth="292.47821044921875" text="Aircraft" />
+            <TableColumn fx:id="flightStatusCol" prefWidth="245.02178955078125" text="Status" />
         </columns>
       </TableView>
     </children>
