@@ -12,8 +12,6 @@ public class FlightDeckOfficerDashboardViewController
     @javafx.fxml.FXML
     private Button viewFitnessReportButton;
     @javafx.fxml.FXML
-    private Button arsenalVIewButton;
-    @javafx.fxml.FXML
     private Button logOutButton;
     @javafx.fxml.FXML
     private Button emergencyMsgSceneButton;
@@ -30,7 +28,9 @@ public class FlightDeckOfficerDashboardViewController
     @javafx.fxml.FXML
     private Button navigationSceneButton1;
     @javafx.fxml.FXML
-    private Button stationsSceneButton;
+    private Button authoriseResupplyViewButton;
+    @javafx.fxml.FXML
+    private Button appointmentViewButton;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -42,15 +42,18 @@ public class FlightDeckOfficerDashboardViewController
     }
 
     @javafx.fxml.FXML
-    public void viewFitnessReportButtonOnAction(ActionEvent actionEvent) {
+    public void viewFitnessReportButtonOnAction(ActionEvent actionEvent) throws IOException {
+        Helper.sceneSwitcher(actionEvent, "/com/example/airplane_carrier_project_cse213/minhaz/fdo-view-fitness-report-view.fxml");
     }
 
     @javafx.fxml.FXML
-    public void emergencyMsgSceneButtonOnAction(ActionEvent actionEvent) {
+    public void emergencyMsgSceneButtonOnAction(ActionEvent actionEvent) throws IOException {
+        Helper.sceneSwitcher(actionEvent, "/com/example/airplane_carrier_project_cse213/minhaz/fdo-create-emergency-brief-view.fxml");
     }
 
     @javafx.fxml.FXML
-    public void navigationSceneButtonOnAction(ActionEvent actionEvent) {
+    public void navigationSceneButtonOnAction(ActionEvent actionEvent) throws IOException {
+        Helper.sceneSwitcher(actionEvent, "/com/example/airplane_carrier_project_cse213/minhaz/fdo-view-navigation-report-view.fxml");
     }
 
     @javafx.fxml.FXML
@@ -59,7 +62,8 @@ public class FlightDeckOfficerDashboardViewController
     }
 
     @javafx.fxml.FXML
-    public void inventoryReportsSceneButtonOnAction(ActionEvent actionEvent) {
+    public void inventoryReportsSceneButtonOnAction(ActionEvent actionEvent) throws IOException {
+        Helper.sceneSwitcher(actionEvent, "/com/example/airplane_carrier_project_cse213/minhaz/fdo-view-spare-parts-report-view.fxml");
     }
 
     @javafx.fxml.FXML
@@ -68,10 +72,12 @@ public class FlightDeckOfficerDashboardViewController
     }
 
     @javafx.fxml.FXML
-    public void arsenalViewButtonOnAction(ActionEvent actionEvent) {
+    public void appointmentViewButtonOnAction(ActionEvent actionEvent) throws IOException {
+        Helper.sceneSwitcher(actionEvent, "/com/example/airplane_carrier_project_cse213/minhaz/fdo-create-appointments-view.fxml");
     }
 
     @javafx.fxml.FXML
-    public void stationsSceneButtonOnAction(ActionEvent actionEvent) {
+    public void authoriseResupplyViewButtonOnAction(ActionEvent actionEvent) throws IOException {
+        Helper.sceneSwitcher(actionEvent, "/com/example/airplane_carrier_project_cse213/minhaz/fdo-authorise-resupply-view.fxml");
     }
 }
