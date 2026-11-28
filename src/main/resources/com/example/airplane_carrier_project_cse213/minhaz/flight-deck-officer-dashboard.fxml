@@ -50,7 +50,7 @@
                 <Font name="Arial" size="19.0" />
             </font>
         </Button>
-        <Button fx:id="arsenalVIewButton" alignment="CENTER" layoutX="6.0" layoutY="384.0" mnemonicParsing="false" onAction="#arsenalViewButtonOnAction" prefHeight="37.0" prefWidth="242.0" text="Arsenal">
+        <Button fx:id="appointmentViewButton" alignment="CENTER" layoutX="6.0" layoutY="384.0" mnemonicParsing="false" onAction="#appointmentViewButtonOnAction" prefHeight="37.0" prefWidth="242.0" text="Appointments">
             <font>
                 <Font name="Arial" size="19.0" />
             </font>
@@ -60,7 +60,7 @@
                 <Font name="Arial Bold" size="14.0" />
             </font>
         </Button>
-        <Button fx:id="stationsSceneButton" alignment="CENTER" layoutX="7.0" layoutY="432.0" mnemonicParsing="false" onAction="#stationsSceneButtonOnAction" prefHeight="37.0" prefWidth="242.0" text="Stations">
+        <Button fx:id="authoriseResupplyViewButton" alignment="CENTER" layoutX="7.0" layoutY="432.0" mnemonicParsing="false" onAction="#authoriseResupplyViewButtonOnAction" prefHeight="37.0" prefWidth="242.0" text="Authorise Resupply">
             <font>
                 <Font name="Arial" size="19.0" />
             </font>
