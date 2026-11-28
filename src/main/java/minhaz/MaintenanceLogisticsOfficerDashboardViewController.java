@@ -44,31 +44,26 @@ public class MaintenanceLogisticsOfficerDashboardViewController
     @javafx.fxml.FXML
     public void sparePartsReportSceneOnAction(ActionEvent actionEvent) throws IOException {
         Helper.sceneSwitcher(actionEvent,"/com/example/airplane_carrier_project_cse213/minhaz/mlo-create-aircraft-parts-report-view.fxml");
-
     }
 
     @javafx.fxml.FXML
     public void addInventorySceneButtonOnAction(ActionEvent actionEvent) throws IOException {
         Helper.sceneSwitcher(actionEvent,"/com/example/airplane_carrier_project_cse213/minhaz/mlo-add-items-inventory-view.fxml");
-
     }
 
     @javafx.fxml.FXML
     public void updateInventorySceneButtonOnAction(ActionEvent actionEvent) throws IOException {
         Helper.sceneSwitcher(actionEvent,"/com/example/airplane_carrier_project_cse213/minhaz/mlo-update-existing-items-view.fxml");
-
     }
 
     @javafx.fxml.FXML
     public void reportInventorySceneButtonOnAction(ActionEvent actionEvent) throws IOException {
         Helper.sceneSwitcher(actionEvent,"/com/example/airplane_carrier_project_cse213/minhaz/mlo-report-inventory-shortage-view.fxml");
-
     }
 
     @javafx.fxml.FXML
     public void sparePartsSceneButtonOnAction(ActionEvent actionEvent) throws IOException {
         Helper.sceneSwitcher(actionEvent,"/com/example/airplane_carrier_project_cse213/minhaz/mlo-check-aircraft-parts-view.fxml");
-
     }
 
     @javafx.fxml.FXML
@@ -79,13 +74,10 @@ public class MaintenanceLogisticsOfficerDashboardViewController
     @javafx.fxml.FXML
     public void viewToolsInventoryButtonOnAction(ActionEvent actionEvent) throws IOException {
         Helper.sceneSwitcher(actionEvent,"/com/example/airplane_carrier_project_cse213/minhaz/mlo-view-maintenance-tools-inventory-view.fxml");
-
     }
-
 
     @javafx.fxml.FXML
     public void updateToolsInventoryButtonOnAction(ActionEvent actionEvent) throws IOException {
         Helper.sceneSwitcher(actionEvent,"/com/example/airplane_carrier_project_cse213/minhaz/mlo-update-tools-inventory-view.fxml");
-
     }
 }
