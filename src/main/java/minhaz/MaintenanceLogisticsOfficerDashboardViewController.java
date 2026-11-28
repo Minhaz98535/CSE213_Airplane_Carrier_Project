@@ -1,8 +1,11 @@
 package minhaz;
 
+import com.example.airplane_carrier_project_cse213.Helper;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+
+import java.io.IOException;
 
 public class MaintenanceLogisticsOfficerDashboardViewController
 {
@@ -17,13 +20,13 @@ public class MaintenanceLogisticsOfficerDashboardViewController
     @javafx.fxml.FXML
     private Button sparePartsReportScene;
     @javafx.fxml.FXML
-    private Button aircraftStatusSceneButton;
-    @javafx.fxml.FXML
     private Button sparePartsSceneButton;
     @javafx.fxml.FXML
     private Button addInventorySceneButton;
     @javafx.fxml.FXML
     private Button reportInventorySceneButton;
+    @javafx.fxml.FXML
+    private Button logAircraftSceneButton;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -46,7 +49,8 @@ public class MaintenanceLogisticsOfficerDashboardViewController
     }
 
     @javafx.fxml.FXML
-    public void logOutButtonOnAction(ActionEvent actionEvent) {
+    public void logOutButtonOnAction(ActionEvent actionEvent) throws IOException {
+        Helper.sceneSwitcher(actionEvent, "login-view.fxml");
     }
 
     @Deprecated
@@ -73,7 +77,7 @@ public class MaintenanceLogisticsOfficerDashboardViewController
     public void updateInventorySceneButtonOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void aircraftStatusSceneButtonOnAction(ActionEvent actionEvent) {
     }
 
@@ -83,5 +87,10 @@ public class MaintenanceLogisticsOfficerDashboardViewController
 
     @javafx.fxml.FXML
     public void sparePartsSceneButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void logAircraftSceneButtonOnAction(ActionEvent actionEvent) throws IOException {
+        Helper.sceneSwitcher(actionEvent,"/com/example/airplane_carrier_project_cse213/minhaz/mlo-log-aircraft-into-system-view.fxml");
     }
 }
