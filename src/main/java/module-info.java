@@ -2,7 +2,6 @@ module com.example.cse213_airplane_carrier_project {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.graphics;
-    requires com.example.cse213_airplane_carrier_project;
 
 
     opens NonUser to javafx.base;
