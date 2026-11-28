@@ -110,7 +110,7 @@
                 <TableColumn fx:id="riskstatusTableCollumn" prefWidth="245.02178955078125" text="Risk Status" />
             </columns>
         </TableView>
-      <Label fx:id="vesselLable" alignment="CENTER" layoutX="324.0" layoutY="123.0" prefHeight="69.0" prefWidth="174.0" style="-fx-background-color: lightblue;" text="Vessels " textAlignment="CENTER">
+      <Label fx:id="vesselLable" alignment="CENTER" layoutX="324.0" layoutY="103.0" prefHeight="90.0" prefWidth="174.0" style="-fx-background-color: lightblue;" text="Vessels " textAlignment="CENTER">
          <font>
             <Font size="26.0" />
          </font>
@@ -120,5 +120,6 @@
             <Font name="System Bold" size="10.0" />
          </font>
       </Button>
+      <Label fx:id="vessellabel" layoutX="397.0" layoutY="169.0" text="33" />
     </children>
 </AnchorPane>

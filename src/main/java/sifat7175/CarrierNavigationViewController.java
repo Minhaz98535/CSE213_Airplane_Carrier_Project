@@ -17,6 +17,8 @@ public class CarrierNavigationViewController
     private TableColumn vesselidTableCollumn;
     @javafx.fxml.FXML
     private TableView nearbyvesseltraficTableView;
+    @javafx.fxml.FXML
+    private Label vessellabel;
 
     @javafx.fxml.FXML
     public void initialize() {
