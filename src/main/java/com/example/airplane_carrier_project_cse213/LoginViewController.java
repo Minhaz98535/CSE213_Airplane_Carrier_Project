@@ -107,7 +107,7 @@ public class LoginViewController
                 Helper.sceneSwitcher(actionEvent,"/com/example/airplane_carrier_project_cse213/minhaz/flight-deck-officer-dashboard.fxml");
             }
             else if(userRole.equals("Maintenance Logistics Officer")){
-
+                Helper.sceneSwitcher(actionEvent,"/com/example/airplane_carrier_project_cse213/minhaz/maintenance-logistics-officer-dashboard-view.fxml");
             }
             else if(userRole.equals("Carrier navigation officer")){
 

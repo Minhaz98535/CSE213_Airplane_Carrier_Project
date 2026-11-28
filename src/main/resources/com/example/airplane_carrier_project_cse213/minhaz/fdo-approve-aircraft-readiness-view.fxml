@@ -1,14 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="minhaz.FdoApproveAircraftReadinessViewController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="minhaz.FdoApproveAircraftReadinessViewController">
+    <children>
+        <Button fx:id="backToDashboardButton" layoutX="20.0" layoutY="525.0" mnemonicParsing="false" onAction="#backToDashboardButtonOnAction" prefHeight="38.0" prefWidth="103.0" style="-fx-background-color: pink;" text="Back">
+            <font>
+                <Font name="System Bold" size="26.0" />
+            </font>
+        </Button>
+        <Text layoutX="141.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aircraft Details" wrappingWidth="139.20000000000005">
+            <font>
+                <Font name="System Bold Italic" size="17.0" />
+            </font>
+        </Text>
+        <TableView fx:id="aircraftTableView" layoutX="140.0" layoutY="164.0" prefHeight="197.0" prefWidth="747.0">
+            <columns>
+                <TableColumn fx:id="aircraftIdCol" prefWidth="208.80300903320312" text="Aircraft ID" />
+                <TableColumn fx:id="aircraftTypeCol" prefWidth="285.6969909667969" text="Aircraft Type" />
+                <TableColumn fx:id="aircraftStatusCol" prefWidth="252.23605346679688" text="Status" />
+            </columns>
+        </TableView>
+        <ComboBox fx:id="idSelectionComboBox" layoutX="396.0" layoutY="434.0" prefHeight="36.0" prefWidth="185.0" />
+        <Button fx:id="confirmButton" layoutX="663.0" layoutY="428.0" mnemonicParsing="false" onAction="#confirmButtonOnAction" prefHeight="48.0" prefWidth="176.0" text="Confirm Ready">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Button>
+        <Text layoutX="136.0" layoutY="460.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-style: red\;" text="Approve readiness" textAlignment="CENTER" wrappingWidth="207.00812955080266">
+            <font>
+                <Font name="Times New Roman Bold" size="24.0" />
+            </font>
+        </Text>
+      <Label layoutX="244.0" layoutY="40.0" text="Aircraft Readiness Approval">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="387.0" layoutY="397.0" text="Select using ID">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+    </children>
 </AnchorPane>
